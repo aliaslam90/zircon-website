@@ -177,16 +177,18 @@ export function TestimonialsSection() {
         .testimonial-slider-container .slick-list {
           overflow: hidden !important;
         }
-        /* Mobile: enforce wide slide (~85% of container) so card is readable, 1.05–1.2 cards per view */
+        /* Mobile only: wide slide (88vw) so card is 85–90% of screen, one card + peek */
         @media (max-width: 639px) {
           .testimonial-slider-mobile .slick-slide {
-            width: 85% !important;
-            min-width: 85% !important;
+            width: 88vw !important;
+            min-width: 88vw !important;
+            max-width: 88vw !important;
             box-sizing: border-box;
           }
           .testimonial-slider-mobile .testimonial-slide-wrapper {
             padding: 12px 0;
             width: 100% !important;
+            min-width: 100%;
             max-width: 100%;
             box-sizing: border-box;
           }
