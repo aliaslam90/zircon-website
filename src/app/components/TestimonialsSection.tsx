@@ -83,13 +83,14 @@ export function TestimonialsSection() {
         }
       },
       {
-        // Mobile: one full-width card so text is readable (no squeeze)
+        // Mobile: 1.05–1.2 cards per view, slide = 85% viewport (readable card + peek)
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: "4%",
+          centerPadding: "6%",
+          variableWidth: true,
         }
       }
     ]
@@ -106,7 +107,7 @@ export function TestimonialsSection() {
         />
       </div>
 
-      <div className="w-full max-w-[1400px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center mb-10 md:mb-12 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -131,13 +132,13 @@ export function TestimonialsSection() {
         <div className="testimonial-slider-container testimonial-slider-mobile w-full relative overflow-hidden">
           <Slider {...settings}>
             {testimonials.map((item, idx) => (
-              <div key={idx} className="px-2 sm:px-3 py-3">
+              <div key={idx} className="testimonial-slide-wrapper">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (idx % 3) * 0.1 }}
-                  className="bg-white p-5 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col min-h-[220px] md:h-[240px] w-full border border-[#f0f0f0]"
+                  className="bg-white p-5 sm:p-6 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col h-full min-h-[200px] md:min-h-[240px] w-full border border-[#f0f0f0]"
                 >
                   <div className="flex gap-1 mb-3">
                     {[1, 2, 3, 4, 5].map((s) => (
@@ -145,7 +146,7 @@ export function TestimonialsSection() {
                     ))}
                   </div>
                   
-                  <p className="text-[13px] sm:text-sm leading-relaxed text-[#2f2a2a] font-['Montserrat'] mb-4 flex-grow line-clamp-4">
+                  <p className="text-base leading-relaxed text-[#2f2a2a] font-['Montserrat'] mb-4 flex-grow line-clamp-4">
                     {item.text}
                   </p>
                   
@@ -168,6 +169,7 @@ export function TestimonialsSection() {
       <style>{`
         .testimonial-slider-container .slick-track {
           display: flex !important;
+          gap: 16px;
         }
         .testimonial-slider-container .slick-slide {
           height: inherit !important;
@@ -175,9 +177,23 @@ export function TestimonialsSection() {
         .testimonial-slider-container .slick-list {
           overflow: hidden !important;
         }
+        /* Mobile: enforce wide slide (~85% of container) so card is readable, 1.05–1.2 cards per view */
         @media (max-width: 639px) {
-          .testimonial-slider-mobile .slick-slide > div {
-            min-width: 0 !important;
+          .testimonial-slider-mobile .slick-slide {
+            width: 85% !important;
+            min-width: 85% !important;
+            box-sizing: border-box;
+          }
+          .testimonial-slider-mobile .testimonial-slide-wrapper {
+            padding: 12px 0;
+            width: 100% !important;
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+        }
+        @media (min-width: 640px) {
+          .testimonial-slider-container .slick-track {
+            gap: 0;
           }
         }
         .testimonial-slider-container .slick-dots li button:before {
