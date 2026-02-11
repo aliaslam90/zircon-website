@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import svgPaths from "../../imports/svg-76zdggpx2y";
-import heroVideo from '@/assets/hero-video.mov';
+import heroVideo from '@/assets/hero-video.mp4';
 
 export const Hero = () => {
   return (
@@ -9,19 +9,16 @@ export const Hero = () => {
       {/* Video Background with Radial Masking */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* Centered hero video bubble */}
-          <div className="relative w-[260px] h-[260px] md:w-[420px] md:h-[420px] lg:w-[520px] lg:h-[520px] rounded-full overflow-hidden shadow-[0_0_60px_rgba(0,136,179,0.7)]">
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              controlsList="nodownload"
-              className="w-full h-full object-cover"
-            >
-              <source src={heroVideo} type="video/quicktime" />
-            </video>
-          </div>
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            controlsList="nodownload"
+            className="absolute min-w-full min-h-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
           
           {/* Enhanced Radial Mask Overlay to match screenshot depth */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.2)_30%,rgba(0,0,0,0.8)_60%,black_90%)] pointer-events-none" />
