@@ -41,10 +41,10 @@ export const SolutionsMedicalPage = () => {
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-12 text-[#ABABAB] text-sm font-['Montserrat'] font-medium justify-center">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight size={14} className="text-[#CC0A63]" />
+            <ChevronRight size={14} className="text-[#DD005C]" />
             <span className="text-white/60">Solutions</span>
-            <ChevronRight size={14} className="text-[#CC0A63]" />
-            <span className="text-[#CC0A63]">Medical</span>
+            <ChevronRight size={14} className="text-[#DD005C]" />
+            <span className="text-[#DD005C]">Medical</span>
           </div>
 
           <div className="text-center max-w-4xl mx-auto">

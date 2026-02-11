@@ -61,8 +61,8 @@ export const CategoryPage = () => {
             <Link to={`/solutions/${typeId}`} className="hover:text-white transition-colors">
               {typeData?.name} Solutions
             </Link>
-            <ChevronRight size={14} className="text-[#CC0A63]" />
-            <span className="text-[#CC0A63]">{categoryData.name}</span>
+            <ChevronRight size={14} className="text-[#DD005C]" />
+            <span className="text-[#DD005C]">{categoryData.name}</span>
           </div>
 
           <div className="text-center max-w-5xl mx-auto">

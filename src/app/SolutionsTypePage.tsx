@@ -19,7 +19,7 @@ export const SolutionsTypePage = () => {
           <div className="flex items-center gap-2 mb-8 text-[#ABABAB] text-sm font-['Montserrat'] font-medium">
             <span>Solutions</span>
             <ChevronRight size={14} />
-            <span className="text-[#0542BD]">{typeData.name}</span>
+            <span className="text-[#DD005C]">{typeData.name}</span>
           </div>
 
           <motion.h1 

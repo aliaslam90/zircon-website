@@ -31,9 +31,9 @@ export const AboutHero = () => {
             <span>Home</span>
           </div>
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-            <path d="M6 12L10 8L6 4" stroke="#0542BD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M6 12L10 8L6 4" stroke="#DD005C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span className="text-[#0542BD] text-[10px] uppercase font-bold tracking-[0.2em]">About Us</span>
+          <span className="text-[#DD005C] text-[10px] uppercase font-bold tracking-[0.2em]">About Us</span>
         </motion.div>
 
         {/* Heading */}
