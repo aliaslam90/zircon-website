@@ -1,0 +1,180 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import imgGroup381671 from "figma:asset/fcbf1a6ae17a709a798622b42a2fa36aaa09fb29.png";
+import svgPaths from "../../imports/svg-oa709jqtgm";
+
+function StarIcon({ filled }: { filled: boolean }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path 
+        d={svgPaths.p5d80e00} 
+        fill={filled ? "#1C55E0" : "transparent"} 
+        stroke={filled ? "none" : "#D4D3D3"} 
+      />
+    </svg>
+  );
+}
+
+const testimonials = [
+  {
+    initials: "AB",
+    name: "Alice Brown",
+    role: "Project Coordinator",
+    text: "This product has transformed the way our team collaborates. The intuitive interface allows us to work seamlessly, increasing our productivity immensely.",
+    rating: 4
+  },
+  {
+    initials: "CD",
+    name: "Charlie Davis",
+    role: "HR Specialist",
+    text: "We've seen a significant reduction in onboarding time for new employees since using this tool. It’s easy to navigate and the support team is always ready to help!",
+    rating: 4
+  },
+  {
+    initials: "EF",
+    name: "Eva Fox",
+    role: "Data Analyst",
+    text: "The analytics provided by this platform are outstanding. They have enabled us to make data-driven decisions that have boosted our overall performance.",
+    rating: 4
+  },
+  {
+    initials: "GH",
+    name: "George Harris",
+    role: "Operations Manager",
+    text: "Implementation was a breeze. The system is robust and handles our complex workflows without any hiccups. A game changer for our operations.",
+    rating: 5
+  },
+  {
+    initials: "IL",
+    name: "Isabella Lee",
+    role: "Marketing Director",
+    text: "I love the clean design and the power of the reporting tools. It gives me all the insights I need to steer our marketing strategy effectively.",
+    rating: 5
+  }
+];
+
+export function TestimonialsSection() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 8000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  };
+
+  return (
+    <section className="relative bg-[#fafbff] py-16 overflow-hidden w-full">
+      {/* Background Pattern - subtle */}
+      <div className="absolute inset-0 z-0 opacity-[0.05] grayscale pointer-events-none">
+        <img 
+          src={imgGroup381671} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="w-full max-w-[1400px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
+        <div className="flex flex-col items-center mb-10 md:mb-12 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center px-5 py-0.5 rounded-full bg-gradient-to-r from-[#dd005c] to-[#0088b3] mb-4"
+          >
+            <span className="text-white text-xs md:text-sm font-semibold font-['Montserrat']"># Testimonial</span>
+          </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707] font-['Montserrat'] max-w-3xl leading-tight"
+          >
+            Client Success Stories
+          </motion.h2>
+        </div>
+
+        <div className="testimonial-slider-container w-full relative">
+          <Slider {...settings}>
+            {testimonials.map((item, idx) => (
+              <div key={idx} className="px-3 py-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: (idx % 3) * 0.1 }}
+                  className="bg-white p-5 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col h-[240px] w-full border border-[#f0f0f0]"
+                >
+                  <div className="flex gap-1 mb-3">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <StarIcon key={s} filled={s <= item.rating} />
+                    ))}
+                  </div>
+                  
+                  <p className="text-[13px] leading-relaxed text-[#2f2a2a] font-['Montserrat'] mb-4 flex-grow line-clamp-3">
+                    {item.text}
+                  </p>
+                  
+                  <div className="flex items-center gap-3 mt-auto pt-3 border-t border-gray-50">
+                    <div className="w-8 h-8 rounded-full bg-[#2F2A2A] flex items-center justify-center text-[#ebeff8] font-semibold text-[10px] font-['Montserrat'] shrink-0">
+                      {item.initials}
+                    </div>
+                    <div className="flex flex-col min-w-0">
+                      <span className="text-xs font-bold text-[#2f2a2a] font-['Montserrat'] leading-tight truncate">{item.name}</span>
+                      <span className="text-[10px] text-[#2f2a2a]/60 font-['Montserrat'] leading-tight truncate">{item.role}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+      
+      <style>{`
+        .testimonial-slider-container .slick-track {
+          display: flex !important;
+        }
+        .testimonial-slider-container .slick-slide {
+          height: inherit !important;
+        }
+        .testimonial-slider-container .slick-dots li button:before {
+          color: #0088b3;
+        }
+        .testimonial-slider-container .slick-dots li.slick-active button:before {
+          color: #dd005c;
+        }
+      `}</style>
+    </section>
+  );
+}
