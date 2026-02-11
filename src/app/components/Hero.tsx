@@ -6,23 +6,18 @@ import heroVideo from '@/assets/hero-video.mp4';
 export const Hero = () => {
   return (
     <section className="relative min-h-[600px] md:h-[700px] w-full bg-black overflow-hidden flex items-center justify-center pt-24 pb-12 md:pt-20 md:pb-0">
-      {/* Video Background with Radial Masking */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* Centered hero video bubble (500px on desktop) with matching radial size */}
+          {/* Single hero video bubble (video and glow are the same size) */}
           <div className="relative w-[260px] h-[260px] md:w-[380px] md:h-[380px] lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(0,136,179,0.6)]">
-            {/* Dark radial mask exactly matching bubble */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.25)_55%,rgba(0,0,0,0.9)_100%)] pointer-events-none" />
-            {/* Blue glow exactly matching bubble */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,136,179,0.4)_0%,transparent_70%)] pointer-events-none" />
-
             <video 
               autoPlay 
               loop 
               muted 
               playsInline 
               controlsList="nodownload"
-              className="relative z-10 w-full h-full object-cover"
+              className="w-full h-full object-cover"
             >
               <source src={heroVideo} type="video/mp4" />
             </video>
