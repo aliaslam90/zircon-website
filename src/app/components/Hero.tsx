@@ -5,7 +5,7 @@ import heroVideo from '@/assets/hero-video.mp4';
 
 export const Hero = () => {
   return (
-    <section className="relative w-full bg-black overflow-hidden pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 flex flex-col items-center justify-center">
+    <section className="relative min-h-[600px] md:h-[700px] w-full bg-black overflow-hidden flex items-center justify-center pt-[88px] sm:pt-[92px] md:pt-[96px] pb-12 md:pb-0">
       {/* Orb: one shared container for radial circle + video (same size, clipped to circle) */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
         <div className="relative rounded-full overflow-hidden aspect-square w-[clamp(260px,45vw,500px)]">
@@ -28,38 +28,36 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] text-center">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-[clamp(16px,3vw,48px)] text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block bg-gradient-to-r from-[#DD005C] to-[#0088b3] px-5 py-1 rounded-full mb-6"
+          className="inline-block bg-gradient-to-r from-[#DD005C] to-[#0088b3] px-5 py-1 rounded-full mb-6 md:mb-8"
         >
-          <span className="text-white text-xs font-medium tracking-wide">#1 Innovative Equipment</span>
+          <span className="text-white text-xs md:text-sm font-medium tracking-wide">#1 Innovative Equipment</span>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-4 drop-shadow-2xl"
-          >
-            Powering Dental Solutions, Medical Equipments Innovation for a Healthier Tomorrow
-          </motion.h1>
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] mb-6 md:mb-8 max-w-5xl mx-auto drop-shadow-2xl"
+        >
+          Powering Dental Solutions, Medical Equipments Innovation for a Healthier Tomorrow
+        </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-white/80 text-sm md:text-base max-w-2xl mx-auto font-['Montserrat'] leading-relaxed mb-6"
-          >
-            Bridging global innovation with regional healthcare professionals across the GCC
-          </motion.p>
-        </div>
+        {/* Subheadline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-white/90 text-sm md:text-[18px] max-w-2xl mx-auto mb-8 md:mb-12 font-['Arial'] leading-relaxed"
+        >
+          Bridging global innovation with regional healthcare professionals across the GCC
+        </motion.p>
 
         {/* Buttons */}
         <motion.div
