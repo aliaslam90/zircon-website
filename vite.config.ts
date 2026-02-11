@@ -14,6 +14,8 @@ export default defineConfig({
     alias: {
       // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
+      // Map figma:asset virtual imports to local assets directory
+      'figma:asset': path.resolve(__dirname, './src/assets'),
     },
   },
 
