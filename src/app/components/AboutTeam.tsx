@@ -55,12 +55,14 @@ export const AboutTeam = () => {
         }
       },
       {
+        // Mobile: 1.05–1.2 cards per view, slide = 88vw (readable card + peek)
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
           centerPadding: "6%",
+          variableWidth: true,
         }
       }
     ]
@@ -68,7 +70,7 @@ export const AboutTeam = () => {
 
   return (
     <section className="w-full bg-white py-12 md:py-16">
-      <div className="max-w-[1400px] mx-auto px-[clamp(16px,4vw,60px)]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
           <div className="flex flex-col gap-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-black/5 bg-black/5 self-start">
@@ -107,10 +109,10 @@ export const AboutTeam = () => {
         </div>
 
         {/* Team Cards Container - overflow hidden on mobile to prevent horizontal scroll */}
-        <div className="team-slider-container team-slider-mobile -mx-3 overflow-hidden">
+        <div className="team-slider-container team-slider-mobile w-full relative overflow-hidden">
           <Slider ref={sliderRef} {...settings}>
             {teamMembers.map((member, index) => (
-              <div key={index} className="px-2 sm:px-3">
+              <div key={index} className="team-slide-wrapper">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -149,6 +151,31 @@ export const AboutTeam = () => {
         }
         .team-slider-container .slick-track {
           display: flex !important;
+          gap: 16px;
+        }
+        .team-slider-container .slick-slide {
+          height: inherit !important;
+        }
+        /* Mobile only: wide slide (88vw) so card is 85–90% of screen, one card + peek */
+        @media (max-width: 639px) {
+          .team-slider-mobile .slick-slide {
+            width: 88vw !important;
+            min-width: 88vw !important;
+            max-width: 88vw !important;
+            box-sizing: border-box;
+          }
+          .team-slider-mobile .team-slide-wrapper {
+            padding: 12px 0;
+            width: 100% !important;
+            min-width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+        }
+        @media (min-width: 640px) {
+          .team-slider-container .slick-track {
+            gap: 0;
+          }
         }
         @media (min-width: 768px) {
           .team-slider-container .slick-list {
