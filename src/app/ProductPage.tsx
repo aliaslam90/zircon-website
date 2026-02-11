@@ -159,42 +159,42 @@ export const ProductPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-black pt-[100px] pb-12 relative overflow-hidden">
+      {/* Hero Section - same padding/typography as category hero, layout: text left, image right */}
+      <section className="bg-black pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <img src={imgGroup381671} alt="" className="w-full h-full object-cover" />
         </div>
 
-        <div className="w-full max-w-[1200px] mx-auto px-6 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-1.5 mb-6 text-[#ABABAB] text-[9px] font-['Montserrat'] font-medium uppercase tracking-wider">
+          <div className="flex items-center gap-1.5 mb-6 text-[#ABABAB] text-[10px] font-['Montserrat'] font-medium uppercase tracking-[0.2em]">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight size={8} />
+            <ChevronRight size={12} className="text-[#ABABAB]" />
             <Link to="/solutions" className="hover:text-white transition-colors">Solutions</Link>
-            <ChevronRight size={8} />
+            <ChevronRight size={12} className="text-[#ABABAB]" />
             <Link to={`/solutions/${typeId}`} className="hover:text-white transition-colors">{typeData?.name}</Link>
-            <ChevronRight size={8} />
+            <ChevronRight size={12} className="text-[#ABABAB]" />
             <Link to={`/solutions/${typeId}/${categoryId}`} className="hover:text-white transition-colors">{categoryData?.name}</Link>
-            <ChevronRight size={8} />
-            <span className="text-[#DD005C] uppercase tracking-widest">{product.name}</span>
+            <ChevronRight size={12} className="text-[#DD005C]" />
+            <span className="text-[#DD005C]">{product.name}</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 w-full">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 w-full">
             <div className="w-full max-w-2xl">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="mb-6"
+                className="mb-4"
               >
-                <div className="inline-block bg-[#DD005C] px-4 py-2 mb-1">
-                  <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold font-['Montserrat'] leading-tight">
+                <div className="inline-block bg-[#DD005C] px-3 py-1.5 mb-1">
+                  <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
                     {heroTitle}
                   </h1>
                 </div>
                 {isImplantium && (
                   <div className="block">
-                    <div className="inline-block bg-[#DD005C] px-4 py-2">
-                      <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold font-['Montserrat'] leading-tight">
+                    <div className="inline-block bg-[#DD005C] px-3 py-1.5">
+                      <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
                         (Bone Level)
                       </h1>
                     </div>
@@ -206,36 +206,36 @@ export const ProductPage = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-white/80 text-base md:text-lg font-['Montserrat'] mb-8 max-w-xl"
+                className="text-white/80 text-sm md:text-base font-['Montserrat'] mb-6 max-w-xl leading-relaxed"
               >
                 {heroSubtitle}
               </motion.p>
 
               {/* Badges */}
-              <div className="flex flex-wrap gap-6 mb-10">
+              <div className="flex flex-wrap gap-4 md:gap-6 mb-8">
                 {[
-                  { icon: <Shield size={18} />, title: 'Lifetime', subtitle: 'Warranty' },
-                  { icon: <Layers size={18} />, title: 'Grade 4', subtitle: 'Titanium' },
-                  { icon: <Activity size={18} />, title: 'S.L.A', subtitle: 'Surface' },
+                  { icon: <Shield size={16} />, title: 'Lifetime', subtitle: 'Warranty' },
+                  { icon: <Layers size={16} />, title: 'Grade 4', subtitle: 'Titanium' },
+                  { icon: <Activity size={16} />, title: 'S.L.A', subtitle: 'Surface' },
                 ].map((badge, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white">
+                  <div key={i} className="flex items-center gap-2.5">
+                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white shrink-0">
                       {badge.icon}
                     </div>
                     <div>
-                      <div className="text-white font-bold text-[11px] font-['Montserrat'] leading-none mb-1 uppercase tracking-wider">{badge.title}</div>
-                      <div className="text-[#9CA3AF] text-[10px] font-['Montserrat'] leading-none uppercase">{badge.subtitle}</div>
+                      <div className="text-white font-semibold text-[10px] font-['Montserrat'] leading-none mb-0.5 uppercase tracking-[0.2em]">{badge.title}</div>
+                      <div className="text-[#9CA3AF] text-[9px] font-['Montserrat'] leading-none uppercase">{badge.subtitle}</div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center gap-4">
-                <button className="bg-gradient-to-r from-[#DD005C] to-[#0542BD] text-white px-8 py-3.5 rounded-full text-[13px] font-bold font-['Montserrat'] flex items-center gap-2 hover:opacity-90 transition-opacity shadow-lg">
+              <div className="flex items-center gap-3">
+                <button className="bg-gradient-to-r from-[#DD005C] to-[#0542BD] text-white px-6 py-3 rounded-full text-xs font-semibold font-['Montserrat'] flex items-center gap-2 hover:opacity-90 transition-opacity shadow-lg">
                   View Catalog
-                  <ArrowRight size={16} />
+                  <ArrowRight size={14} />
                 </button>
-                <button className="bg-white/5 text-white px-8 py-3.5 rounded-full text-[13px] font-bold font-['Montserrat'] border border-white/20 hover:bg-white/10 transition-all">
+                <button className="bg-white/5 text-white px-6 py-3 rounded-full text-xs font-semibold font-['Montserrat'] border border-white/20 hover:bg-white/10 transition-all">
                   Request a Quote
                 </button>
               </div>
