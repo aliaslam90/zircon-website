@@ -5,7 +5,7 @@ import heroVideo from '@/assets/hero-video.mp4';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[600px] md:h-[700px] w-full bg-black overflow-hidden flex items-center justify-center pt-24 pb-12 md:pt-20 md:pb-0">
+    <section className="relative min-h-[600px] md:h-[700px] w-full bg-black overflow-hidden flex items-center justify-center pt-[88px] sm:pt-[92px] md:pt-[96px] pb-12 md:pb-0">
       {/* Orb: one shared container for radial circle + video (same size, clipped to circle) */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
         <div className="relative rounded-full overflow-hidden aspect-square w-[clamp(260px,45vw,500px)]">

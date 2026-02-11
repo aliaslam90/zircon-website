@@ -35,30 +35,36 @@ const HomePage = () => (
   </>
 );
 
+function AppLayout() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  return (
+    <div className={`min-h-screen font-['Montserrat',sans-serif] selection:bg-[#DD005C] selection:text-white relative ${isHome ? 'bg-black' : 'bg-white'}`}>
+      <Header />
+      {/* No top padding on home so hero goes to top; header overlays hero. Other pages get padding. */}
+      <main className={`relative w-full ${isHome ? 'pt-0' : 'pt-[88px] sm:pt-[92px] md:pt-[96px]'}`}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/solutions" element={<SolutionsLandingPage />} />
+          <Route path="/solutions/dental" element={<SolutionsDentalPage />} />
+          <Route path="/solutions/medical" element={<SolutionsMedicalPage />} />
+          <Route path="/solutions/:typeId" element={<SolutionsTypePage />} />
+          <Route path="/solutions/:typeId/:categoryId" element={<CategoryPage />} />
+          <Route path="/solutions/:typeId/:categoryId/:productId" element={<ProductPage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/events" element={<EventsPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
-      <div className={`bg-white min-h-screen font-['Montserrat',sans-serif] selection:bg-[#DD005C] selection:text-white relative`}>
-        <Header />
-        {/* Global top padding so content never hides behind fixed header */}
-        <main className="relative w-full pt-[88px] sm:pt-[92px] md:pt-[96px]">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/solutions" element={<SolutionsLandingPage />} />
-            <Route path="/solutions/dental" element={<SolutionsDentalPage />} />
-            <Route path="/solutions/medical" element={<SolutionsMedicalPage />} />
-            <Route path="/solutions/:typeId" element={<SolutionsTypePage />} />
-            <Route path="/solutions/:typeId/:categoryId" element={<CategoryPage />} />
-            <Route path="/solutions/:typeId/:categoryId/:productId" element={<ProductPage />} />
-            <Route path="/education" element={<EducationPage />} />
-            <Route path="/events" element={<EventsPage />} />
-          </Routes>
-        </main>
-        
-        {/* Footer is global and appears on all pages */}
-        <Footer />
-      </div>
+      <AppLayout />
     </BrowserRouter>
   );
 }

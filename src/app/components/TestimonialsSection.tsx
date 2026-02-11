@@ -169,10 +169,11 @@ export function TestimonialsSection() {
       <style>{`
         .testimonial-slider-container .slick-track {
           display: flex !important;
-          gap: 16px;
+          gap: 0;
         }
         .testimonial-slider-container .slick-slide {
           height: inherit !important;
+          margin: 0 !important;
         }
         .testimonial-slider-container .slick-list {
           overflow: hidden !important;
@@ -191,11 +192,6 @@ export function TestimonialsSection() {
             min-width: 100%;
             max-width: 100%;
             box-sizing: border-box;
-          }
-        }
-        @media (min-width: 640px) {
-          .testimonial-slider-container .slick-track {
-            gap: 0;
           }
         }
         .testimonial-slider-container .slick-dots li button:before {

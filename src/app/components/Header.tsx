@@ -58,7 +58,7 @@ export const Header = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[60] bg-[#070707] transition-all duration-300 ${
           scrolled ? 'py-2' : 'py-4 md:py-6'
         }`}
       >
