@@ -13,30 +13,32 @@ export const SolutionsTypePage = () => {
   return (
     <div className="bg-[#f5f5f5] min-h-screen">
       {/* Header */}
-      <section className="bg-white pt-[88px] sm:pt-[92px] md:pt-[96px] pb-20 border-b border-[#EBEBEB]">
+      <section className="bg-white pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 border-b border-[#EBEBEB]">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 mb-8 text-[#ABABAB] text-sm font-['Montserrat'] font-medium">
+          <div className="flex items-center gap-1.5 mb-6 text-[#ABABAB] text-[10px] font-['Montserrat'] font-medium uppercase tracking-[0.2em]">
             <span>Solutions</span>
-            <ChevronRight size={14} />
+            <ChevronRight size={12} />
             <span className="text-[#DD005C]">{typeData.name}</span>
           </div>
 
-          <motion.h1 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-6"
-          >
-            {typeData.name} Solutions
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-[#4A4A4A] text-lg md:text-xl max-w-2xl font-['Montserrat']"
-          >
-            Explore our comprehensive range of {typeData.name.toLowerCase()} categories designed to elevate your practice.
-          </motion.p>
+          <div className="max-w-3xl">
+            <motion.h1 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-4"
+            >
+              {typeData.name} Solutions
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-[#4A4A4A] text-sm md:text-base max-w-2xl font-['Montserrat'] leading-relaxed"
+            >
+              Explore our comprehensive range of {typeData.name.toLowerCase()} categories designed to elevate your practice.
+            </motion.p>
+          </div>
         </div>
       </section>
 

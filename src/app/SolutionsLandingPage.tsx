@@ -9,26 +9,28 @@ export const SolutionsLandingPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-black pt-[88px] sm:pt-[92px] md:pt-[96px] pb-24 md:pb-32 relative overflow-hidden">
+      <section className="bg-black pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-40">
            {/* Abstract grid/pattern here */}
         </div>
-        <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-5xl md:text-7xl font-bold font-['Montserrat'] mb-6"
-          >
-            Our Solutions
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-['Montserrat']"
-          >
-            Empowering healthcare excellence through cutting-edge medical and dental technology.
-          </motion.p>
+        <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
+          <div className="text-center max-w-3xl mx-auto">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight"
+            >
+              Our Solutions
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-white/80 text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto leading-relaxed"
+            >
+              Empowering healthcare excellence through cutting-edge medical and dental technology.
+            </motion.p>
+          </div>
         </div>
       </section>
 

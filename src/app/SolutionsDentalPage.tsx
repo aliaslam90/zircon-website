@@ -31,7 +31,7 @@ export const SolutionsDentalPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-black pt-[140px] pb-32 relative overflow-hidden">
+      <section className="bg-black pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
@@ -43,19 +43,19 @@ export const SolutionsDentalPage = () => {
 
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-12 text-[#ABABAB] text-sm font-['Montserrat'] font-medium justify-center">
+          <div className="flex items-center gap-1.5 mb-6 text-[#ABABAB] text-[10px] font-['Montserrat'] font-medium uppercase tracking-[0.2em] justify-center">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight size={14} className="text-[#DD005C]" />
+            <ChevronRight size={12} className="text-[#ABABAB]" />
             <span className="text-white/60">Solutions</span>
-            <ChevronRight size={14} className="text-[#DD005C]" />
+            <ChevronRight size={12} className="text-[#DD005C]" />
             <span className="text-[#DD005C]">Dental</span>
           </div>
 
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-white text-5xl md:text-7xl font-bold font-['Montserrat'] mb-8 leading-[1.1]"
+              className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight"
             >
               Comprehensive Healthcare <br /> Solutions Portfolio
             </motion.h1>
@@ -63,7 +63,7 @@ export const SolutionsDentalPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-white/80 text-lg md:text-xl font-['Montserrat'] max-w-2xl mx-auto leading-relaxed"
+              className="text-white/80 text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto leading-relaxed"
             >
               From dental implants to medical equipment, we provide end-to-end solutions for modern healthcare facilities.
             </motion.p>

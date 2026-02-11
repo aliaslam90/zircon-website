@@ -92,8 +92,8 @@ const caseStudies = [
 export const EducationPage = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section - matches About Us design */}
-      <section className="relative h-[480px] w-full bg-black overflow-hidden flex items-center justify-center pt-[88px] sm:pt-[92px] md:pt-[96px]">
+      {/* Hero Section - matches category hero height, padding, text */}
+      <section className="relative w-full bg-black overflow-hidden pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20">
         <div className="absolute inset-0 z-0 opacity-60">
           <ImageWithFallback 
             src={imgGroup381671} 
@@ -103,37 +103,36 @@ export const EducationPage = () => {
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-[clamp(16px,4vw,60px)] text-center">
-          {/* Breadcrumbs */}
+        <div className="relative z-10 max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center justify-center gap-2 mb-6 md:mb-8"
+            className="flex items-center justify-center gap-1.5 mb-6 text-[#ABABAB] text-[10px] font-['Montserrat'] font-medium uppercase tracking-[0.2em]"
           >
-            <Link to="/" className="flex items-center gap-1.5 text-[#ABABAB] text-[10px] uppercase font-bold tracking-[0.2em] hover:text-white transition-colors">
-              <span>Home</span>
-            </Link>
-            <ChevronRight size={12} className="text-[#DD005C]" />
-            <span className="text-[#DD005C] text-[10px] uppercase font-bold tracking-[0.2em]">Education</span>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <ChevronRight size={12} className="text-[#ABABAB]" />
+            <span className="text-[#DD005C]">Education</span>
           </motion.div>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] mb-6 font-['Montserrat'] tracking-tight"
-          >
-            Advance Your <br /> Clinical Excellence
-          </motion.h1>
+          <div className="text-center max-w-3xl mx-auto">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight"
+            >
+              Advance Your <br /> Clinical Excellence
+            </motion.h1>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-white/80 text-sm md:text-lg max-w-2xl mx-auto font-['Montserrat'] leading-relaxed"
-          >
-            Access world-class courses, clinical case studies, webinars, and comprehensive resources to elevate your practice.
-          </motion.p>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="text-white/80 text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto leading-relaxed"
+            >
+              Access world-class courses, clinical case studies, webinars, and comprehensive resources to elevate your practice.
+            </motion.p>
+          </div>
         </div>
       </section>
 
