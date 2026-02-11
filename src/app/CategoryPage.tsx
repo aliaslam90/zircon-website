@@ -39,7 +39,7 @@ export const CategoryPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Category Hero */}
-      <section className="bg-black pt-[112px] sm:pt-[116px] md:pt-[120px] pb-16 md:pb-20 relative overflow-hidden">
+      <section className="bg-black pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
             src={imgGroup381671} 

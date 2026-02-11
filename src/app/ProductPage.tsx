@@ -186,19 +186,13 @@ export const ProductPage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 className="mb-4"
               >
-                <div className="inline-block bg-[#DD005C] px-3 py-1.5 mb-1">
-                  <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
-                    {heroTitle}
-                  </h1>
-                </div>
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-1">
+                  {heroTitle}
+                </h1>
                 {isImplantium && (
-                  <div className="block">
-                    <div className="inline-block bg-[#DD005C] px-3 py-1.5">
-                      <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
-                        (Bone Level)
-                      </h1>
-                    </div>
-                  </div>
+                  <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
+                    (Bone Level)
+                  </h1>
                 )}
               </motion.div>
               
