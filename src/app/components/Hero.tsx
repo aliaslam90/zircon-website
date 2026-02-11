@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import svgPaths from "../../imports/svg-76zdggpx2y";
+import heroVideo from '@/assets/hero-video.mov';
 
 export const Hero = () => {
   return (
@@ -16,7 +17,7 @@ export const Hero = () => {
             controlsList="nodownload"
             className="absolute min-w-full min-h-full object-cover"
           >
-            <source src="/_videos/v1/b9790cb69269c6aecd1e8277251bb928b6c89cae" type="video/mp4" />
+            <source src={heroVideo} />
           </video>
           
           {/* Enhanced Radial Mask Overlay to match screenshot depth */}
