@@ -9,16 +9,19 @@ export const Hero = () => {
       {/* Video Background with Radial Masking */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
         <div className="relative w-full h-full flex items-center justify-center">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            controlsList="nodownload"
-            className="absolute min-w-full min-h-full object-cover"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+          {/* Centered, smaller hero video bubble */}
+          <div className="relative w-[200px] h-[200px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(0,136,179,0.6)]">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              controlsList="nodownload"
+              className="w-full h-full object-cover"
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
+          </div>
           
           {/* Enhanced Radial Mask Overlay to match screenshot depth */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.2)_30%,rgba(0,0,0,0.8)_60%,black_90%)] pointer-events-none" />
