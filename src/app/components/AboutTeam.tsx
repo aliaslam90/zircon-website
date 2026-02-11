@@ -41,6 +41,8 @@ export const AboutTeam = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    swipe: true,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1280,
@@ -118,6 +120,7 @@ export const AboutTeam = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
+                  drag={false}
                   className="w-full h-[340px] sm:h-[380px] md:h-[460px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
                 >
                   {/* Card Background Gradient */}
@@ -158,6 +161,9 @@ export const AboutTeam = () => {
         }
         /* Mobile only: wide slide (88vw) so card is 85–90% of screen, one card + peek */
         @media (max-width: 639px) {
+          .team-slider-mobile .slick-list {
+            touch-action: pan-x;
+          }
           .team-slider-mobile .slick-slide {
             width: 88vw !important;
             min-width: 88vw !important;
