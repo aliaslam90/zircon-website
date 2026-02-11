@@ -20,5 +20,7 @@ export default defineConfig({
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
-  assetsInclude: ['**/*.svg', '**/*.csv'],
+  // Note: Vite already handles common media types like .mp4 by default;
+  // these entries are just explicit for clarity.
+  assetsInclude: ['**/*.svg', '**/*.csv', '**/*.mp4', '**/*.mov'],
 })
