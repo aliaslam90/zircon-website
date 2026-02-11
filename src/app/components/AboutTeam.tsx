@@ -58,8 +58,9 @@ export const AboutTeam = () => {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: true,
-          centerPadding: "15%",
+          centerPadding: "6%",
         }
       }
     ]
@@ -105,17 +106,17 @@ export const AboutTeam = () => {
           </div>
         </div>
 
-        {/* Team Cards Container */}
-        <div className="team-slider-container -mx-3">
+        {/* Team Cards Container - overflow hidden on mobile to prevent horizontal scroll */}
+        <div className="team-slider-container team-slider-mobile -mx-3 overflow-hidden">
           <Slider ref={sliderRef} {...settings}>
             {teamMembers.map((member, index) => (
-              <div key={index} className="px-3">
+              <div key={index} className="px-2 sm:px-3">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="w-full h-[380px] md:h-[460px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
+                  className="w-full h-[340px] sm:h-[380px] md:h-[460px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
                 >
                   {/* Card Background Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#344ECC] to-[#09144E]" />
@@ -128,11 +129,11 @@ export const AboutTeam = () => {
                   />
                   
                   {/* Text Overlay */}
-                  <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end min-h-[50%]">
-                    <h3 className="text-white text-lg font-bold font-['Montserrat'] leading-tight mb-2 tracking-tight">
+                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end min-h-[45%]">
+                    <h3 className="text-white text-base sm:text-lg font-bold font-['Montserrat'] leading-tight mb-1 sm:mb-2 tracking-tight">
                       {member.name}
                     </h3>
-                    <p className="text-white/70 text-[11px] font-medium leading-relaxed font-['Montserrat'] line-clamp-2">
+                    <p className="text-white/70 text-[11px] sm:text-xs font-medium leading-relaxed font-['Montserrat'] line-clamp-2">
                       {member.role}
                     </p>
                   </div>
@@ -144,11 +145,14 @@ export const AboutTeam = () => {
       </div>
       <style>{`
         .team-slider-container .slick-list {
-          overflow: visible;
+          overflow: hidden !important;
         }
-        @media (min-width: 1400px) {
+        .team-slider-container .slick-track {
+          display: flex !important;
+        }
+        @media (min-width: 768px) {
           .team-slider-container .slick-list {
-            overflow: hidden;
+            margin: 0 -12px;
           }
         }
       `}</style>

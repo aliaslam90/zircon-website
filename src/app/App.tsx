@@ -41,7 +41,7 @@ export default function App() {
       <div className={`bg-white min-h-screen font-['Montserrat',sans-serif] selection:bg-[#DD005C] selection:text-white relative`}>
         <Header />
         {/* Global top padding so content never hides behind fixed header */}
-        <main className="relative w-full pt-[80px] md:pt-[96px]">
+        <main className="relative w-full pt-[88px] sm:pt-[92px] md:pt-[96px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

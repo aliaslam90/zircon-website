@@ -83,12 +83,13 @@ export function TestimonialsSection() {
         }
       },
       {
-        // Mobile: show ~1.2 cards with center mode
+        // Mobile: one full-width card so text is readable (no squeeze)
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: true,
-          centerPadding: "15%",
+          centerPadding: "4%",
         }
       }
     ]
@@ -127,16 +128,16 @@ export function TestimonialsSection() {
           </motion.h2>
         </div>
 
-        <div className="testimonial-slider-container w-full relative">
+        <div className="testimonial-slider-container testimonial-slider-mobile w-full relative overflow-hidden">
           <Slider {...settings}>
             {testimonials.map((item, idx) => (
-              <div key={idx} className="px-3 py-3">
+              <div key={idx} className="px-2 sm:px-3 py-3">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (idx % 3) * 0.1 }}
-                  className="bg-white p-5 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col h-auto md:h-[240px] w-full max-w-[360px] mx-auto border border-[#f0f0f0]"
+                  className="bg-white p-5 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col min-h-[220px] md:h-[240px] w-full border border-[#f0f0f0]"
                 >
                   <div className="flex gap-1 mb-3">
                     {[1, 2, 3, 4, 5].map((s) => (
@@ -144,7 +145,7 @@ export function TestimonialsSection() {
                     ))}
                   </div>
                   
-                  <p className="text-[13px] leading-relaxed text-[#2f2a2a] font-['Montserrat'] mb-4 flex-grow line-clamp-3">
+                  <p className="text-[13px] sm:text-sm leading-relaxed text-[#2f2a2a] font-['Montserrat'] mb-4 flex-grow line-clamp-4">
                     {item.text}
                   </p>
                   
@@ -170,6 +171,14 @@ export function TestimonialsSection() {
         }
         .testimonial-slider-container .slick-slide {
           height: inherit !important;
+        }
+        .testimonial-slider-container .slick-list {
+          overflow: hidden !important;
+        }
+        @media (max-width: 639px) {
+          .testimonial-slider-mobile .slick-slide > div {
+            min-width: 0 !important;
+          }
         }
         .testimonial-slider-container .slick-dots li button:before {
           color: #0088b3;
