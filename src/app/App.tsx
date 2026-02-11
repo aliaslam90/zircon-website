@@ -40,7 +40,8 @@ export default function App() {
     <BrowserRouter>
       <div className={`bg-white min-h-screen font-['Montserrat',sans-serif] selection:bg-[#DD005C] selection:text-white relative`}>
         <Header />
-        <main className="relative w-full">
+        {/* Global top padding so content never hides behind fixed header */}
+        <main className="relative w-full pt-[80px] md:pt-[96px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

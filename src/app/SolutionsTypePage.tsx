@@ -11,7 +11,7 @@ export const SolutionsTypePage = () => {
   if (!typeData) return <div className="pt-32 text-center font-bold">Solution not found</div>;
 
   return (
-    <div className="bg-[#f5f5f5] min-h-screen pt-[80px]">
+    <div className="bg-[#f5f5f5] min-h-screen">
       {/* Header */}
       <section className="bg-white py-20 border-b border-[#EBEBEB]">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">

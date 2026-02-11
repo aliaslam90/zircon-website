@@ -83,9 +83,12 @@ export function TestimonialsSection() {
         }
       },
       {
+        // Mobile: show ~1.2 cards with center mode
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "15%",
         }
       }
     ]
@@ -133,7 +136,7 @@ export function TestimonialsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (idx % 3) * 0.1 }}
-                  className="bg-white p-5 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col h-[240px] w-full border border-[#f0f0f0]"
+                  className="bg-white p-5 rounded-[24px] shadow-[0px_2px_12px_0px_rgba(31,45,61,0.08)] flex flex-col h-auto md:h-[240px] w-full max-w-[360px] mx-auto border border-[#f0f0f0]"
                 >
                   <div className="flex gap-1 mb-3">
                     {[1, 2, 3, 4, 5].map((s) => (

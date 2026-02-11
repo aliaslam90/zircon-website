@@ -93,7 +93,7 @@ export const EducationPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-black pt-[100px] pb-24 relative overflow-hidden">
+      <section className="bg-black pt-20 md:pt-24 pb-20 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <ImageWithFallback 
             src={imgGroup381671} 

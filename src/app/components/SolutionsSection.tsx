@@ -5,7 +5,7 @@ import imgGroup381671 from "figma:asset/fcbf1a6ae17a709a798622b42a2fa36aaa09fb29
 
 export function SolutionsSection() {
   return (
-    <section className="relative bg-[#070707] py-16 overflow-hidden w-full">
+    <section className="relative bg-[#070707] py-16 md:py-20 overflow-hidden w-full">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img 
@@ -15,7 +15,7 @@ export function SolutionsSection() {
         />
       </div>
 
-      <div className="w-full max-w-[1400px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center mb-10 md:mb-12 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export function SolutionsSection() {
           </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {/* Dental Solutions Card */}
           <Link to="/solutions/dental" className="block group">
             <motion.div 

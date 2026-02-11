@@ -7,7 +7,7 @@ import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
 export const SolutionsLandingPage = () => {
   return (
-    <div className="bg-white min-h-screen pt-[80px]">
+    <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <section className="bg-black py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-40">
@@ -33,9 +33,9 @@ export const SolutionsLandingPage = () => {
       </section>
 
       {/* Main Options */}
-      <section className="py-20 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {solutionsData.map((type, index) => (
               <motion.div
                 key={type.id}
@@ -53,7 +53,7 @@ export const SolutionsLandingPage = () => {
                   <span className="text-white text-9xl font-bold font-['Montserrat'] uppercase">{type.name[0]}</span>
                 </div>
 
-                <div className="absolute inset-0 p-10 md:p-16 flex flex-col justify-end">
+                <div className="absolute inset-0 p-8 md:p-16 flex flex-col justify-end">
                   <div className="inline-flex bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full self-start mb-6 border border-white/20">
                     <span className="text-white text-xs font-bold font-['Montserrat'] uppercase tracking-widest">{type.name} Division</span>
                   </div>

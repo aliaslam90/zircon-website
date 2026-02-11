@@ -39,7 +39,7 @@ export const CategoryPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Category Hero - Matches Figma Implants design */}
-      <section className="bg-black pt-[140px] pb-32 relative overflow-hidden">
+      <section className="bg-black pt-[120px] md:pt-[140px] pb-24 md:pb-32 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
@@ -86,10 +86,10 @@ export const CategoryPage = () => {
       </section>
 
       {/* Product Lines Section */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-            <h2 className="text-[#070707] text-4xl md:text-5xl font-bold font-['Montserrat']">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-10 md:mb-16">
+            <h2 className="text-[#070707] text-3xl md:text-5xl font-bold font-['Montserrat']">
               Product Lines
             </h2>
             <p className="text-[#070707] text-sm md:text-base font-['Montserrat'] max-w-lg leading-relaxed">
@@ -97,7 +97,7 @@ export const CategoryPage = () => {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             {/* Left side: Product List */}
             <div className="flex-1 w-full space-y-4">
               {categoryData.products.map((product, idx) => {
@@ -119,7 +119,7 @@ export const CategoryPage = () => {
                       isActive ? 'bg-[#DD005C]' : 'bg-[#EBEBEB]'
                     }`} />
                     
-                    <div className="pl-8 pr-6 py-6 flex gap-6 items-start">
+                    <div className="pl-6 pr-4 py-5 md:pl-8 md:pr-6 md:py-6 flex gap-4 md:gap-6 items-start">
                       {/* Icon Container */}
                       <div className={`w-12 h-12 rounded-full shrink-0 flex items-center justify-center transition-all duration-300 ${
                         isActive 
@@ -130,14 +130,14 @@ export const CategoryPage = () => {
                       </div>
 
                       <div className="flex-1">
-                        <h3 className={`text-lg font-bold font-['Montserrat'] mb-3 transition-colors duration-300 ${
+                        <h3 className={`text-base sm:text-lg font-bold font-['Montserrat'] mb-2 md:mb-3 transition-colors duration-300 ${
                           isActive 
                             ? 'bg-clip-text bg-gradient-to-r from-[#DD005C] to-[#0088B3] text-transparent' 
                             : 'text-[#070707]'
                         }`}>
                           {product.name}
                         </h3>
-                        <p className="text-[#070707] text-sm font-['Montserrat'] leading-relaxed mb-4">
+                        <p className="text-[#070707] text-sm font-['Montserrat'] leading-relaxed mb-3 md:mb-4">
                           {product.description || `A premium ${categoryData.name.toLowerCase()} solution designed for excellent clinical results and long-term stability.`}
                         </p>
                         
@@ -167,8 +167,8 @@ export const CategoryPage = () => {
             </div>
 
             {/* Right side: Product Showcase Images */}
-            <div className="w-full lg:w-[600px] shrink-0 sticky top-[120px]">
-              <div className="flex flex-col items-center gap-12">
+            <div className="w-full lg:w-[600px] lg:shrink-0 lg:sticky lg:top-[120px] mt-10 lg:mt-0">
+              <div className="flex flex-col items-center gap-8 md:gap-12">
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}

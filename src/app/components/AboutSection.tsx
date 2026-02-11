@@ -72,7 +72,7 @@ export const AboutSection = ({ showButton = true }: { showButton?: boolean }) =>
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="relative py-12 md:py-16 px-[clamp(16px,4vw,60px)] max-w-[1400px] mx-auto overflow-hidden">
+    <section ref={sectionRef} id="about" className="relative py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto overflow-hidden">
       <div className="flex flex-col gap-8 relative w-full items-center">
         {/* Header Content */}
         <div className="flex flex-col gap-2 relative w-full items-center text-center">
@@ -101,15 +101,15 @@ export const AboutSection = ({ showButton = true }: { showButton?: boolean }) =>
                 }
 
                 return (
-                  <div key={idx} className="relative inline-block w-fit text-center">
+                  <div key={idx} className="relative inline-block text-center max-w-full">
                     {/* Background Muted Line */}
-                    <span className="text-[18px] sm:text-[22px] md:text-[28px] font-semibold leading-[1.3] text-[#E5E7EB] font-['Montserrat'] block whitespace-nowrap tracking-tight">
+                    <span className="text-[16px] sm:text-[20px] md:text-[24px] font-semibold leading-[1.4] text-[#E5E7EB] font-['Montserrat'] block tracking-tight">
                       {lineText}
                     </span>
                     
                     {/* Highlight Overlay: Sequential Reveal */}
                     <span 
-                      className="absolute top-0 left-0 w-full h-full text-[18px] sm:text-[22px] md:text-[28px] font-semibold leading-[1.3] text-[#070707] font-['Montserrat'] select-none pointer-events-none text-center block whitespace-nowrap overflow-hidden tracking-tight"
+                      className="absolute top-0 left-0 w-full h-full text-[16px] sm:text-[20px] md:text-[24px] font-semibold leading-[1.4] text-[#070707] font-['Montserrat'] select-none pointer-events-none text-center block overflow-hidden tracking-tight"
                       style={{
                         clipPath: `inset(0 ${100 - (currentLineHighlightProgress * 100)}% 0 0)`,
                         transition: 'none' // Controlled by lerped progress state

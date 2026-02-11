@@ -58,6 +58,8 @@ export const AboutTeam = () => {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "15%",
         }
       }
     ]
@@ -113,7 +115,7 @@ export const AboutTeam = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="w-full h-[460px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
+                  className="w-full h-[380px] md:h-[460px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
                 >
                   {/* Card Background Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#344ECC] to-[#09144E]" />
