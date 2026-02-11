@@ -92,43 +92,48 @@ const caseStudies = [
 export const EducationPage = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-black pt-[88px] sm:pt-[92px] md:pt-[96px] pb-20 md:pb-24 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40">
+      {/* Hero Section - matches About Us design */}
+      <section className="relative h-[480px] w-full bg-black overflow-hidden flex items-center justify-center pt-[88px] sm:pt-[92px] md:pt-[96px]">
+        <div className="absolute inset-0 z-0 opacity-60">
           <ImageWithFallback 
             src={imgGroup381671} 
             alt="" 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover mix-blend-screen" 
           />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-[clamp(16px,4vw,60px)] text-center">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-1.5 mb-12 text-[#ABABAB] text-[9px] font-['Montserrat'] font-medium uppercase tracking-wider">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight size={8} />
-            <span className="text-[#DD005C]">Education</span>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center justify-center gap-2 mb-6 md:mb-8"
+          >
+            <Link to="/" className="flex items-center gap-1.5 text-[#ABABAB] text-[10px] uppercase font-bold tracking-[0.2em] hover:text-white transition-colors">
+              <span>Home</span>
+            </Link>
+            <ChevronRight size={12} className="text-[#DD005C]" />
+            <span className="text-[#DD005C] text-[10px] uppercase font-bold tracking-[0.2em]">Education</span>
+          </motion.div>
 
-          <div className="flex flex-col items-center text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-white text-4xl md:text-6xl lg:text-7xl font-bold font-['Montserrat'] leading-[1.1] mb-8"
-            >
-              Advance Your<br />Clinical Excellence
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-white/80 text-lg md:text-xl font-['Montserrat'] max-w-3xl leading-relaxed"
-            >
-              Access world-class courses, clinical case studies, webinars, and 
-              comprehensive resources to elevate your practice.
-            </motion.p>
-          </div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] mb-6 font-['Montserrat'] tracking-tight"
+          >
+            Advance Your <br /> Clinical Excellence
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-white/80 text-sm md:text-lg max-w-2xl mx-auto font-['Montserrat'] leading-relaxed"
+          >
+            Access world-class courses, clinical case studies, webinars, and comprehensive resources to elevate your practice.
+          </motion.p>
         </div>
       </section>
 
