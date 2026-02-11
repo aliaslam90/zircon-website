@@ -21,7 +21,7 @@ import imgImplantiumDimensions from "figma:asset/16efc1e42ad79e08a37c6e9782b6fae
 import imgPreOperative from "figma:asset/dd2c1dd13fce21f9961430b648fd1ed373269f63.png";
 import imgImplantPlacement from "figma:asset/9e0c43ce60d1a76207b2468aa6ae54b8c3591fed.png";
 import imgHealingAbutment from "figma:asset/7328563220b50a1408bfc8f4db32fa07adf0ad5f.png";
-import imgStep4Healing from "figma:asset/87132da5e0764cdee84f42a2fa36aaa09fb29.png"; // reusing step 4 or similar
+import imgStep4Healing from "figma:asset/87132da5e0764cdee84f42a243756e685a6cc805.png"; // step 4 healing image
 import img6MonthFollowUp from "figma:asset/af78fe4052b5f85331e6efbe5b41a6caf1642b5d.png";
 import img1YearFollowUp from "figma:asset/7d85495cf8878a200fd90e2d2f70dbd3eb612734.png";
 
