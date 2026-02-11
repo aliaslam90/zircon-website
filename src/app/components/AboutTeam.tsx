@@ -57,14 +57,14 @@ export const AboutTeam = () => {
         }
       },
       {
-        // Mobile: 1.05–1.2 cards per view, slide = 88vw (readable card + peek)
+        // Mobile: 1 card + peek, no variableWidth so swipe works on iOS
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: "6%",
-          variableWidth: true,
+          centerPadding: "5%",
+          infinite: true,
         }
       }
     ]
@@ -110,8 +110,8 @@ export const AboutTeam = () => {
           </div>
         </div>
 
-        {/* Team Cards Container - overflow hidden on mobile to prevent horizontal scroll */}
-        <div className="team-slider-container team-slider-mobile w-full relative overflow-hidden">
+        {/* Team Cards Container - overflow hidden, no layer blocking touch */}
+        <div className="team-slider-container team-slider-mobile w-full relative overflow-hidden" style={{ touchAction: 'pan-x' }}>
           <Slider ref={sliderRef} {...settings}>
             {teamMembers.map((member, index) => (
               <div key={index} className="team-slide-wrapper">
@@ -159,22 +159,18 @@ export const AboutTeam = () => {
         .team-slider-container .slick-slide {
           height: inherit !important;
         }
-        /* Mobile only: wide slide (88vw) so card is 85–90% of screen, one card + peek */
+        /* Mobile: let Slick size slides (centerMode), ensure swipe works */
         @media (max-width: 639px) {
           .team-slider-mobile .slick-list {
             touch-action: pan-x;
+            -webkit-overflow-scrolling: touch;
           }
-          .team-slider-mobile .slick-slide {
-            width: 88vw !important;
-            min-width: 88vw !important;
-            max-width: 88vw !important;
-            box-sizing: border-box;
+          .team-slider-mobile .slick-track {
+            gap: 0;
           }
           .team-slider-mobile .team-slide-wrapper {
-            padding: 12px 0;
-            width: 100% !important;
-            min-width: 100%;
-            max-width: 100%;
+            padding: 0 6px;
+            width: 100%;
             box-sizing: border-box;
           }
         }
