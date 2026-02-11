@@ -108,7 +108,7 @@ export const SectorsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-white text-3xl md:text-5xl font-light leading-[1.1] tracking-tight"
+            className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight"
           >
             Precision Solutions for <br className="hidden md:block" />
             <span className="font-semibold italic text-[#dd005c]">Global Healthcare</span>

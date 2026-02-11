@@ -41,7 +41,7 @@ export const AboutKeyValue = () => {
                 <div className="w-6 h-[1px] bg-[#0542BD]" />
                 <span className="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em]">Our Values</span>
               </div>
-              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-['Montserrat'] leading-[1.15] tracking-tight">
+              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
                 Zircon Key Value
               </h2>
               <div className="flex flex-col gap-4 text-white/60 text-[13px] md:text-[14px] font-['Montserrat'] leading-relaxed max-w-[520px]">

@@ -74,7 +74,7 @@ export const SolutionsMedicalPage = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#070707] text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6"
+            className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-6"
           >
             Advanced Medical Solutions
           </motion.h2>

@@ -128,7 +128,7 @@ export const EventsPage = () => {
                 Our events
               </motion.div>
               
-              <h2 className="text-[#070707] text-2xl md:text-3xl lg:text-4xl font-bold font-['Montserrat'] leading-[1.2] mb-4">
+              <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-4">
                 Insights That Power Smarter Medical Equipment Decisions
               </h2>
               <p className="text-[#070707]/60 text-sm md:text-base font-['Montserrat'] max-w-lg">

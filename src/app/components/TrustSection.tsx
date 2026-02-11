@@ -54,7 +54,7 @@ export const TrustSection = () => {
           viewport={{ once: true }}
           className="text-center w-full"
         >
-          <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight max-w-3xl mx-auto">
+          <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight max-w-3xl mx-auto">
             Trusted healthcare enabler across the GCC
           </h2>
         </motion.div>

@@ -56,7 +56,7 @@ export function CTASection() {
             className="flex flex-col gap-6"
           >
             <div className="space-y-4">
-              <h2 className="font-semibold text-white font-['Montserrat'] leading-[1.1] max-w-xl drop-shadow-sm text-[36px] md:text-[42px]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-white font-['Montserrat'] leading-tight max-w-xl drop-shadow-sm">
                 Connecting Innovation and Care, One Device Away
               </h2>
               <p className="text-sm md:text-[16px] text-white/90 font-['Arial'] max-w-md leading-relaxed">

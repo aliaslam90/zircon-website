@@ -89,7 +89,7 @@ export const CategoryPage = () => {
       <section className="py-16 md:py-24">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-10 md:mb-16">
-            <h2 className="text-[#070707] text-3xl md:text-5xl font-bold font-['Montserrat']">
+            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
               Product Lines
             </h2>
             <p className="text-[#070707] text-sm md:text-base font-['Montserrat'] max-w-lg leading-relaxed">

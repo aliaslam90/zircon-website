@@ -32,7 +32,7 @@ export function SolutionsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white font-['Montserrat'] leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl font-medium text-white font-['Montserrat'] leading-tight"
           >
             Comprehensive Healthcare Solutions
           </motion.h2>

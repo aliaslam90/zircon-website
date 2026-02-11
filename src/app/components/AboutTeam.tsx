@@ -79,7 +79,7 @@ export const AboutTeam = () => {
               <div className="w-1.5 h-1.5 rounded-full bg-[#0542BD]" />
               <span className="text-[#070707]/60 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] font-['Montserrat']">Our Team</span>
             </div>
-            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-bold font-['Montserrat'] leading-[1.1] tracking-tight max-w-[600px]">
+            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight max-w-[600px]">
               Experts Behind Every Reliable Medical Solution
             </h2>
             <p className="text-[#070707]/60 text-xs md:text-sm font-medium font-['Montserrat'] max-w-[450px] leading-relaxed">

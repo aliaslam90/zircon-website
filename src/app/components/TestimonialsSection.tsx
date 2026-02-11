@@ -123,7 +123,7 @@ export function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707] font-['Montserrat'] max-w-3xl leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#070707] font-['Montserrat'] max-w-3xl leading-tight"
           >
             Client Success Stories
           </motion.h2>

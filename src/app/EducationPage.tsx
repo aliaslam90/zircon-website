@@ -150,7 +150,7 @@ export const EducationPage = () => {
               # 24/7 Response Guarantee
             </motion.div>
             
-            <h2 className="text-[#070707] text-3xl md:text-5xl font-bold font-['Montserrat'] mb-4">
+            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-4">
               Professional Courses
             </h2>
             <p className="text-[#070707]/60 text-sm md:text-base font-['Montserrat']">
@@ -225,7 +225,7 @@ export const EducationPage = () => {
       <section className="py-24 bg-black">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex flex-col items-center text-center mb-16">
-            <h2 className="text-white text-3xl md:text-5xl font-bold font-['Montserrat'] mb-4">
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-4">
               Clinical Case Studies
             </h2>
             <p className="text-white/60 text-sm md:text-base font-['Montserrat']">

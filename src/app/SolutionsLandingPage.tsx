@@ -57,7 +57,7 @@ export const SolutionsLandingPage = () => {
                   <div className="inline-flex bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full self-start mb-6 border border-white/20">
                     <span className="text-white text-xs font-bold font-['Montserrat'] uppercase tracking-widest">{type.name} Division</span>
                   </div>
-                  <h2 className="text-white text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6">
+                  <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-6">
                     {type.name} Solutions
                   </h2>
                   <p className="text-white/80 text-base md:text-lg mb-10 max-w-md font-['Montserrat']">

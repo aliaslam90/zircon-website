@@ -25,7 +25,7 @@ export const SolutionsTypePage = () => {
           <motion.h1 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-[#070707] text-4xl md:text-6xl font-bold font-['Montserrat'] mb-6"
+            className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-6"
           >
             {typeData.name} Solutions
           </motion.h1>
