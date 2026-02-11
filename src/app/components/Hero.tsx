@@ -1,33 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import svgPaths from "../../imports/svg-76zdggpx2y";
-import heroVideo from '@/assets/hero-video.mp4';
 
 export const Hero = () => {
   return (
     <section className="relative min-h-[600px] md:h-[700px] w-full bg-black overflow-hidden flex items-center justify-center pt-24 pb-12 md:pt-20 md:pb-0">
-      {/* Orb: one shared container for radial circle + video (same size, clipped to circle) */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-        <div className="relative rounded-full overflow-hidden aspect-square w-[clamp(260px,45vw,500px)] shadow-[0_0_50px_rgba(0,136,179,0.6)]">
-          {/* Radial circle (background layer) */}
-          <div
-            className="absolute inset-0 w-full h-full rounded-full bg-[radial-gradient(circle_at_center,rgba(0,136,179,0.35)_0%,rgba(0,136,179,0.12)_40%,transparent_70%)]"
-            aria-hidden
-          />
-          {/* Video: fills same circle exactly, clipped by container */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            controlsList="nodownload"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-        </div>
-      </div>
-
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-[clamp(16px,3vw,48px)] text-center">
         {/* Badge */}
         <motion.div
