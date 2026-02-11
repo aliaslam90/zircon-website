@@ -139,57 +139,57 @@ export const SolutionsDentalPage = () => {
             </aside>
 
             {/* Content Panel - Level 3 */}
-            <div className="flex-1 bg-white rounded-3xl border border-[#F5F5F5] overflow-hidden">
+            <div className="flex-1 bg-white rounded-2xl border border-[#F5F5F5] overflow-hidden">
               {/* Category Header */}
-              <div className="p-8 md:p-12 border-b border-[#F5F5F5] flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="flex items-center gap-4">
-                   <div className="w-12 h-12 bg-gradient-to-br from-[#DD005C] to-[#0088b3] rounded-xl flex items-center justify-center text-white shadow-lg">
-                      {categoryIcons[activeCategoryId] || <Layers size={24} />}
+              <div className="p-5 md:p-6 border-b border-[#F5F5F5] flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                   <div className="w-10 h-10 bg-gradient-to-br from-[#DD005C] to-[#0088b3] rounded-lg flex items-center justify-center text-white shadow-md">
+                      {categoryIcons[activeCategoryId] || <Layers size={20} />}
                    </div>
                    <div>
-                     <h3 className="text-[#070707] text-3xl font-bold font-['Montserrat']">{activeCategory.name}</h3>
-                     <p className="text-[#ABABAB] text-sm font-medium font-['Montserrat']">Premium dental {activeCategory.name.toLowerCase()} for clinical excellence.</p>
+                     <h3 className="text-[#070707] text-xl font-semibold font-['Montserrat']">{activeCategory.name}</h3>
+                     <p className="text-[#ABABAB] text-xs font-medium font-['Montserrat']">Premium dental {activeCategory.name.toLowerCase()} for clinical excellence.</p>
                    </div>
                 </div>
                 <Link 
                   to={`/solutions/dental/${activeCategoryId}`}
-                  className="text-[#0542BD] font-bold font-['Montserrat'] text-sm flex items-center gap-2 hover:translate-x-1 transition-transform"
+                  className="text-[#0542BD] font-semibold font-['Montserrat'] text-xs flex items-center gap-1.5 hover:translate-x-0.5 transition-transform"
                 >
                   View Details
-                  <ArrowRight size={18} />
+                  <ArrowRight size={14} />
                 </Link>
               </div>
 
               {/* Product Grid */}
-              <div className="p-8 md:p-12">
-                <div className="mb-8 text-[#ABABAB] text-sm font-bold font-['Montserrat'] uppercase tracking-widest">
+              <div className="p-5 md:p-6">
+                <div className="mb-4 text-[#ABABAB] text-[10px] font-bold font-['Montserrat'] uppercase tracking-widest">
                   Showing {activeCategory.products.length} products
                 </div>
                 
-                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
                   {activeCategory.products.map((product, idx) => (
                     <motion.div
                       key={product.id}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.03 }}
-                      className="bg-[#FFF6FB] rounded-[24px] p-6 border border-transparent hover:border-[#DD005C]/20 hover:shadow-[0_20px_40px_-12px_rgba(221,0,92,0.08)] transition-all duration-300 group flex flex-col justify-between"
+                      className="bg-[#FFF6FB] rounded-xl p-4 border border-transparent hover:border-[#DD005C]/20 hover:shadow-[0_12px_24px_-8px_rgba(221,0,92,0.08)] transition-all duration-300 group flex flex-col justify-between"
                     >
-                      <div className="mb-4">
-                        <h4 className="text-[#070707] text-lg font-bold font-['Montserrat'] group-hover:text-[#DD005C] transition-colors leading-tight">
+                      <div className="mb-3">
+                        <h4 className="text-[#070707] text-sm font-semibold font-['Montserrat'] group-hover:text-[#DD005C] transition-colors leading-tight">
                           {product.name}
                         </h4>
-                        <div className="text-[#4A4A4A] text-[10px] font-bold font-['Montserrat'] uppercase tracking-[0.12em] opacity-40 mt-2">
+                        <div className="text-[#4A4A4A] text-[9px] font-bold font-['Montserrat'] uppercase tracking-[0.12em] opacity-40 mt-1">
                           Clinical {activeCategory.name.replace('Dental ', '')}
                         </div>
                       </div>
                       
                       <Link 
                         to={`/solutions/dental/${activeCategoryId}/${product.id}`}
-                        className="text-[#DD005C] font-bold font-['Montserrat'] text-xs uppercase tracking-widest flex items-center gap-2"
+                        className="text-[#DD005C] font-semibold font-['Montserrat'] text-[10px] uppercase tracking-widest flex items-center gap-1.5"
                       >
                         View Details
-                        <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                        <ChevronRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
                       </Link>
                     </motion.div>
                   ))}
@@ -197,16 +197,16 @@ export const SolutionsDentalPage = () => {
               </div>
 
               {/* Bottom Support Banner */}
-              <div className="m-8 md:m-12 p-8 md:p-10 bg-white border border-[#F5F5F5] rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="m-5 md:m-6 p-5 md:p-6 bg-white border border-[#F5F5F5] rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
-                  <h5 className="text-[#070707] text-xl font-bold font-['Montserrat'] mb-2">Need help finding the right solution?</h5>
-                  <p className="text-[#4A4A4A] text-sm font-['Montserrat']">Our experts are here to assist you in selecting the best equipment for your practice.</p>
+                  <h5 className="text-[#070707] text-base font-semibold font-['Montserrat'] mb-1">Need help finding the right solution?</h5>
+                  <p className="text-[#4A4A4A] text-xs font-['Montserrat']">Our experts are here to assist you in selecting the best equipment for your practice.</p>
                 </div>
-                <div className="flex items-center gap-4 shrink-0">
-                  <button className="px-6 py-4 rounded-full border border-[#DD005C] text-[#DD005C] font-bold font-['Montserrat'] text-sm hover:bg-[#DD005C] hover:text-white transition-all">
+                <div className="flex items-center gap-3 shrink-0">
+                  <button className="px-4 py-2.5 rounded-full border border-[#DD005C] text-[#DD005C] font-semibold font-['Montserrat'] text-xs hover:bg-[#DD005C] hover:text-white transition-all">
                     Download Catalogue
                   </button>
-                  <button className="bg-gradient-to-r from-[#DD005C] to-[#0088b3] text-white px-8 py-4 rounded-full text-sm font-bold font-['Montserrat'] hover:opacity-90 shadow-lg shadow-[#DD005C]/20">
+                  <button className="bg-gradient-to-r from-[#DD005C] to-[#0088b3] text-white px-5 py-2.5 rounded-full text-xs font-semibold font-['Montserrat'] hover:opacity-90 shadow-md shadow-[#DD005C]/20">
                     Contact Now
                   </button>
                 </div>

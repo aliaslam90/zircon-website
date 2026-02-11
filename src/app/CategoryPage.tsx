@@ -38,9 +38,8 @@ export const CategoryPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Category Hero - Matches Figma Implants design */}
-      <section className="bg-black pt-[120px] md:pt-[140px] pb-24 md:pb-32 relative overflow-hidden">
-        {/* Background Pattern */}
+      {/* Category Hero */}
+      <section className="bg-black pt-[88px] sm:pt-[92px] md:pt-[96px] pb-16 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
             src={imgGroup381671} 
@@ -50,26 +49,25 @@ export const CategoryPage = () => {
         </div>
 
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
-          {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 mb-12 text-[#ABABAB] text-sm font-['Montserrat'] font-medium justify-center">
+          <div className="flex items-center gap-1.5 mb-6 text-[#ABABAB] text-[10px] font-['Montserrat'] font-medium uppercase tracking-[0.2em] justify-center">
             <Link to="/" className="hover:text-white transition-colors flex items-center gap-1">
-               <HomeIcon size={14} /> Home
+               <HomeIcon size={12} /> Home
             </Link>
-            <ChevronRight size={14} className="text-[#ABABAB]" />
+            <ChevronRight size={12} className="text-[#ABABAB]" />
             <span className="text-white/60">Solutions</span>
-            <ChevronRight size={14} className="text-[#ABABAB]" />
+            <ChevronRight size={12} className="text-[#ABABAB]" />
             <Link to={`/solutions/${typeId}`} className="hover:text-white transition-colors">
               {typeData?.name} Solutions
             </Link>
-            <ChevronRight size={14} className="text-[#DD005C]" />
+            <ChevronRight size={12} className="text-[#DD005C]" />
             <span className="text-[#DD005C]">{categoryData.name}</span>
           </div>
 
-          <div className="text-center max-w-5xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-white text-5xl md:text-7xl font-bold font-['Montserrat'] mb-8 leading-[1.1]"
+              className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight"
             >
               {categoryData.name}
             </motion.h1>
@@ -77,7 +75,7 @@ export const CategoryPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-white/80 text-lg md:text-xl font-['Montserrat'] max-w-4xl mx-auto leading-relaxed"
+              className="text-white/80 text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto leading-relaxed"
             >
               {categoryData.description || `Our ${categoryData.name.toLowerCase()} solutions are designed to support predictable, long-term clinical success across a wide range of indications.`}
             </motion.p>
@@ -86,23 +84,22 @@ export const CategoryPage = () => {
       </section>
 
       {/* Product Lines Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-16">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-10 md:mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-6 md:mb-10">
             <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight">
               Product Lines
             </h2>
-            <p className="text-[#070707] text-sm md:text-base font-['Montserrat'] max-w-lg leading-relaxed">
+            <p className="text-[#070707] text-xs md:text-sm font-['Montserrat'] max-w-md leading-relaxed">
               Ensure every medical device meets accuracy standards and complies with international healthcare regulations.
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
             {/* Left side: Product List */}
-            <div className="flex-1 w-full space-y-4">
+            <div className="flex-1 w-full space-y-1">
               {categoryData.products.map((product, idx) => {
                 const isHovered = hoveredProduct === product.id;
-                // For the "active" state in Figma (Implantium), we'll use the second item as a mock active state if nothing is hovered
                 const isActive = hoveredProduct ? isHovered : (idx === 1);
 
                 return (
@@ -114,30 +111,28 @@ export const CategoryPage = () => {
                       isActive ? 'bg-[#fff6fb]' : 'bg-transparent'
                     }`}
                   >
-                    {/* Left Border Accent */}
-                    <div className={`absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 ${
+                    <div className={`absolute left-0 top-0 bottom-0 w-0.5 transition-all duration-300 ${
                       isActive ? 'bg-[#DD005C]' : 'bg-[#EBEBEB]'
                     }`} />
                     
-                    <div className="pl-6 pr-4 py-5 md:pl-8 md:pr-6 md:py-6 flex gap-4 md:gap-6 items-start">
-                      {/* Icon Container */}
-                      <div className={`w-12 h-12 rounded-full shrink-0 flex items-center justify-center transition-all duration-300 ${
+                    <div className="pl-4 pr-3 py-3 md:pl-6 md:pr-4 md:py-4 flex gap-3 md:gap-4 items-start">
+                      <div className={`w-9 h-9 rounded-full shrink-0 flex items-center justify-center transition-all duration-300 ${
                         isActive 
                           ? 'bg-gradient-to-r from-[#DD005C] to-[#0088B3] text-white' 
                           : 'bg-[#212121] text-white'
                       }`}>
-                         {categoryIcons[categoryId] || <Layers size={20} />}
+                         {categoryIcons[categoryId] || <Layers size={18} />}
                       </div>
 
-                      <div className="flex-1">
-                        <h3 className={`text-base sm:text-lg font-bold font-['Montserrat'] mb-2 md:mb-3 transition-colors duration-300 ${
+                      <div className="flex-1 min-w-0">
+                        <h3 className={`text-sm sm:text-base font-semibold font-['Montserrat'] mb-1 md:mb-2 transition-colors duration-300 ${
                           isActive 
                             ? 'bg-clip-text bg-gradient-to-r from-[#DD005C] to-[#0088B3] text-transparent' 
                             : 'text-[#070707]'
                         }`}>
                           {product.name}
                         </h3>
-                        <p className="text-[#070707] text-sm font-['Montserrat'] leading-relaxed mb-3 md:mb-4">
+                        <p className="text-[#070707]/80 text-xs font-['Montserrat'] leading-relaxed mb-2 md:mb-3 line-clamp-2">
                           {product.description || `A premium ${categoryData.name.toLowerCase()} solution designed for excellent clinical results and long-term stability.`}
                         </p>
                         
@@ -151,10 +146,10 @@ export const CategoryPage = () => {
                             >
                               <Link 
                                 to={`/solutions/${typeId}/${categoryId}/${product.id}`}
-                                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#DD005C] to-[#0088B3] text-white px-4 py-2 rounded-md text-xs font-bold font-['Montserrat'] shadow-lg shadow-[#DD005C]/10 hover:opacity-90 transition-opacity"
+                                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#DD005C] to-[#0088B3] text-white px-3 py-1.5 rounded-md text-[10px] font-semibold font-['Montserrat'] shadow-md hover:opacity-90 transition-opacity"
                               >
                                 View Details
-                                <ChevronRight size={14} />
+                                <ChevronRight size={12} />
                               </Link>
                             </motion.div>
                           )}
@@ -166,14 +161,14 @@ export const CategoryPage = () => {
               })}
             </div>
 
-            {/* Right side: Product Showcase Images */}
-            <div className="w-full lg:w-[600px] lg:shrink-0 lg:sticky lg:top-[120px] mt-10 lg:mt-0">
-              <div className="flex flex-col items-center gap-8 md:gap-12">
+            {/* Right side: Product Showcase */}
+            <div className="w-full lg:w-[380px] lg:shrink-0 lg:sticky lg:top-[100px] mt-8 lg:mt-0">
+              <div className="flex flex-col items-center gap-6">
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   key={hoveredProduct || 'default'}
-                  className="w-full aspect-square max-w-[500px] flex items-center justify-center"
+                  className="w-full aspect-square max-w-[320px] flex items-center justify-center"
                 >
                   <img 
                     src={mainImage} 
@@ -183,9 +178,9 @@ export const CategoryPage = () => {
                 </motion.div>
                 
                 {bottomImage && (
-                  <div className="flex flex-col items-center gap-6 w-full">
-                    <p className="text-sm font-['Montserrat'] text-[#4A4A4A] text-center">
-                      All sizes share <span className="text-[#0542BD] font-bold">one universal connection</span>
+                  <div className="flex flex-col items-center gap-4 w-full">
+                    <p className="text-xs font-['Montserrat'] text-[#4A4A4A] text-center">
+                      All sizes share <span className="text-[#0542BD] font-semibold">one universal connection</span>
                     </p>
                   </div>
                 )}
