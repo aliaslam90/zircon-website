@@ -169,14 +169,18 @@ export function TestimonialsSection() {
       <style>{`
         .testimonial-slider-container .slick-track {
           display: flex !important;
-          gap: 0;
+          gap: 16px !important;
         }
         .testimonial-slider-container .slick-slide {
           height: inherit !important;
-          margin: 0 !important;
         }
         .testimonial-slider-container .slick-list {
           overflow: hidden !important;
+        }
+        /* Padding left/right between cards so they don't merge */
+        .testimonial-slider-container .testimonial-slide-wrapper {
+          padding: 0 8px !important;
+          box-sizing: border-box !important;
         }
         /* Mobile only: wide slide (88vw) so card is 85–90% of screen, one card + peek */
         @media (max-width: 639px) {
@@ -187,7 +191,7 @@ export function TestimonialsSection() {
             box-sizing: border-box;
           }
           .testimonial-slider-mobile .testimonial-slide-wrapper {
-            padding: 12px 0;
+            padding: 12px 8px !important;
             width: 100% !important;
             min-width: 100%;
             max-width: 100%;
