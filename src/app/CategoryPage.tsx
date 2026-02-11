@@ -7,20 +7,20 @@ import imgGroup381671 from "figma:asset/fcbf1a6ae17a709a798622b42a2fa36aaa09fb29
 import imgImage12 from "figma:asset/164a1c337866b5ab0f36e75f9cb75d06351e34a6.png";
 import imgImage14 from "figma:asset/1cd5ba22af3455afca7d35e5bb8b0891e851a759.png";
 
-// Icon mapping for categories (matching Level 2 sidebar icons)
+// Icon mapping for categories (size 18 to match w-9 h-9 product list container)
 const categoryIcons: Record<string, React.ReactNode> = {
-  implants: <Layers size={24} />,
-  'dental-consumables': <Syringe size={24} />,
-  regeneration: <Sparkles size={24} />,
-  endodontics: <Activity size={24} />,
-  'dental-equipment': <Settings size={24} />,
-  digital: <Monitor size={24} />,
-  'dental-lab': <FlaskConical size={24} />,
-  'mouth-care': <Smile size={24} />,
-  'general-consumables': <Package size={24} />,
-  'or-consumables': <ClipboardList size={24} />,
-  disinfectant: <Droplets size={24} />,
-  homecare: <HomeIcon size={24} />,
+  implants: <Layers size={18} />,
+  'dental-consumables': <Syringe size={18} />,
+  regeneration: <Sparkles size={18} />,
+  endodontics: <Activity size={18} />,
+  'dental-equipment': <Settings size={18} />,
+  digital: <Monitor size={18} />,
+  'dental-lab': <FlaskConical size={18} />,
+  'mouth-care': <Smile size={18} />,
+  'general-consumables': <Package size={18} />,
+  'or-consumables': <ClipboardList size={18} />,
+  disinfectant: <Droplets size={18} />,
+  homecare: <HomeIcon size={18} />,
 };
 
 export const CategoryPage = () => {
@@ -39,7 +39,7 @@ export const CategoryPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Category Hero */}
-      <section className="bg-black pt-[112px] sm:pt-[116px] md:pt-[120px] pb-16 md:pb-20 relative overflow-hidden">
+      <section className="bg-black pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
             src={imgGroup381671} 
