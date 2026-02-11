@@ -13,7 +13,7 @@ export const SolutionsTypePage = () => {
   return (
     <div className="bg-[#f5f5f5] min-h-screen">
       {/* Header */}
-      <section className="bg-white py-20 border-b border-[#EBEBEB]">
+      <section className="bg-white pt-[88px] sm:pt-[92px] md:pt-[96px] pb-20 border-b border-[#EBEBEB]">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
           {/* Breadcrumbs */}
           <div className="flex items-center gap-2 mb-8 text-[#ABABAB] text-sm font-['Montserrat'] font-medium">

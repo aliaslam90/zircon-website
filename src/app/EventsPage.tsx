@@ -70,7 +70,7 @@ export const EventsPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section - Reduced Height & Padding */}
-      <section className="bg-black pt-[80px] pb-12 relative overflow-hidden">
+      <section className="bg-black pt-[88px] sm:pt-[92px] md:pt-[96px] pb-12 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <ImageWithFallback 
             src={imgGroup381671} 

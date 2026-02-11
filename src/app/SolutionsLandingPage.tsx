@@ -9,7 +9,7 @@ export const SolutionsLandingPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-black py-24 md:py-32 relative overflow-hidden">
+      <section className="bg-black pt-[88px] sm:pt-[92px] md:pt-[96px] pb-24 md:pb-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-40">
            {/* Abstract grid/pattern here */}
         </div>

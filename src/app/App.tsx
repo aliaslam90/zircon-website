@@ -41,8 +41,8 @@ function AppLayout() {
   return (
     <div className={`min-h-screen font-['Montserrat',sans-serif] selection:bg-[#DD005C] selection:text-white relative ${isHome ? 'bg-black' : 'bg-white'}`}>
       <Header />
-      {/* No top padding on home so hero goes to top; header overlays hero. Other pages get padding. */}
-      <main className={`relative w-full ${isHome ? 'pt-0' : 'pt-[88px] sm:pt-[92px] md:pt-[96px]'}`}>
+      {/* No main top padding: every page’s first section goes to top, header overlays. Each section uses its own pt for header clearance. */}
+      <main className="relative w-full pt-0">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

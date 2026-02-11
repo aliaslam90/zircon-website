@@ -5,7 +5,7 @@ import svgPaths from "../../imports/svg-todgp7qly0";
 
 export const AboutHero = () => {
   return (
-    <section className="relative h-[480px] w-full bg-black overflow-hidden flex items-center justify-center pt-[80px]">
+    <section className="relative h-[480px] w-full bg-black overflow-hidden flex items-center justify-center pt-[88px] sm:pt-[92px] md:pt-[96px]">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-60">
         <img 
