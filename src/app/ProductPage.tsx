@@ -176,7 +176,7 @@ export const ProductPage = () => {
             <span className="text-[#DD005C]">{product.name}</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-6 w-full">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-6 lg:gap-8 w-full">
             <div className="w-full max-w-xl">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
