@@ -4,7 +4,7 @@ import { Check, Shield, Layers, Activity, ArrowRight, Zap, Target, Box, Settings
 import svgPaths from "../../imports/svg-rljdxlgavg";
 
 // Assets
-import imgHeroKit from "@/assets/surgical-kit.png";
+import imgHeroKit from "figma:asset/surgical-kit.png";
 import imgSequenceOverview from "figma:asset/cab179256ab9b1e23cfdb5f48790c7c65f5a3544.png";
 import imgClinicalBenefits from "figma:asset/973b3e9e1cd8cb4397ce7b1c090fa9c90848df62.png";
 import imgGridBg from "figma:asset/fcbf1a6ae17a709a798622b42a2fa36aaa09fb29.png";
