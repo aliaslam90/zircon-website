@@ -26,6 +26,8 @@ export const Hero = () => {
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
+          {/* Black overlay to dull the video */}
+          <div className="absolute inset-0 w-full h-full rounded-full bg-black/35 pointer-events-none" aria-hidden />
         </div>
       </div>
 
