@@ -92,14 +92,16 @@ export const Header = () => {
                       onClick={toggleMegaMenu}
                       aria-expanded={megaMenuOpen}
                       aria-controls="solutions-mega-menu"
-                      className={`group flex items-center gap-1 text-[13px] xl:text-[14px] font-medium hover:text-[#0088B3] transition-colors whitespace-nowrap px-3 py-2 rounded-full cursor-pointer ${
+                      className={`group flex items-center gap-1 text-[13px] xl:text-[14px] font-medium transition-colors whitespace-nowrap px-3 py-2 rounded-full cursor-pointer ${
                         location.pathname.startsWith('/solutions')
-                          ? 'text-[#0088B3] bg-white/10'
-                          : 'text-white'
+                          ? 'text-[#0088b3]'
+                          : 'text-white hover:text-[#0088B3]'
                       }`}
                     >
-                      {link.name}
-                      <svg className={`w-4 h-4 transition-transform ${megaMenuOpen ? 'rotate-180' : ''}`} viewBox="0 0 16 16" fill="none">
+                      <span className={location.pathname.startsWith('/solutions') ? 'bg-gradient-to-r from-[#DD005C] to-[#0088b3] bg-clip-text text-transparent' : ''}>
+                        {link.name}
+                      </span>
+                      <svg className={`w-4 h-4 transition-transform shrink-0 ${megaMenuOpen ? 'rotate-180' : ''}`} viewBox="0 0 16 16" fill="none">
                         <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
@@ -117,10 +119,10 @@ export const Header = () => {
                   ) : (
                     <Link
                       to={link.href.startsWith('#') ? '#' : link.href}
-                      className={`group flex items-center gap-1 text-[13px] xl:text-[14px] font-medium hover:text-[#0088B3] transition-colors whitespace-nowrap px-3 py-2 rounded-full ${
+                      className={`group flex items-center gap-1 text-[13px] xl:text-[14px] font-medium transition-colors whitespace-nowrap px-3 py-2 rounded-full ${
                         location.pathname === link.href
-                          ? 'text-[#0088B3] bg-white/10'
-                          : 'text-white'
+                          ? 'bg-gradient-to-r from-[#DD005C] to-[#0088b3] bg-clip-text text-transparent'
+                          : 'text-white hover:text-[#0088B3]'
                       }`}
                     >
                       {link.name}
@@ -171,10 +173,12 @@ export const Header = () => {
                           <button
                             onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
                             className={`flex items-center justify-between text-base font-medium py-3 border-b border-white/5 ${
-                              location.pathname.startsWith('/solutions') ? 'text-[#0088B3]' : 'text-white'
+                              location.pathname.startsWith('/solutions') ? 'text-[#0088b3]' : 'text-white'
                             }`}
                           >
-                            {link.name}
+                            <span className={location.pathname.startsWith('/solutions') ? 'bg-gradient-to-r from-[#DD005C] to-[#0088b3] bg-clip-text text-transparent' : ''}>
+                              {link.name}
+                            </span>
                             {mobileSolutionsOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                           </button>
                           <AnimatePresence>
@@ -224,8 +228,10 @@ export const Header = () => {
                         <Link
                           to={link.href.startsWith('#') ? '#' : link.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className={`text-base font-medium hover:text-[#0088B3] py-3 transition-colors border-b border-white/5 last:border-0 ${
-                            location.pathname === link.href ? 'text-[#0088B3]' : 'text-white'
+                          className={`text-base font-medium py-3 transition-colors border-b border-white/5 last:border-0 ${
+                            location.pathname === link.href
+                              ? 'bg-gradient-to-r from-[#DD005C] to-[#0088b3] bg-clip-text text-transparent'
+                              : 'text-white hover:text-[#0088B3]'
                           }`}
                         >
                           {link.name}
