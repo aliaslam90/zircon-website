@@ -121,7 +121,7 @@ export const AboutTeam = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   drag={false}
-                  className="w-full h-[340px] sm:h-[380px] md:h-[460px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
+                  className="w-full h-[300px] sm:h-[340px] md:h-[400px] relative rounded-[24px] overflow-hidden group border border-[#EBEBEB]"
                 >
                   {/* Card Background Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#344ECC] to-[#09144E]" />
@@ -154,7 +154,7 @@ export const AboutTeam = () => {
         }
         .team-slider-container .slick-track {
           display: flex !important;
-          gap: 16px;
+          gap: 20px;
         }
         .team-slider-container .slick-slide {
           height: inherit !important;
@@ -166,7 +166,7 @@ export const AboutTeam = () => {
             -webkit-overflow-scrolling: touch;
           }
           .team-slider-mobile .slick-track {
-            gap: 0;
+            gap: 12px;
           }
           .team-slider-mobile .team-slide-wrapper {
             padding: 0 6px;
@@ -176,7 +176,7 @@ export const AboutTeam = () => {
         }
         @media (min-width: 640px) {
           .team-slider-container .slick-track {
-            gap: 0;
+            gap: 20px;
           }
         }
         @media (min-width: 768px) {

@@ -28,15 +28,15 @@ const footerLinks = [
     links: [
       { name: "Events", href: "/events" },
       { name: "Testimonials", href: "/#testimonials" },
-      { name: "FAQ", href: "/about" },
-      { name: "Download Center", href: "/solutions" }
+      { name: "FAQ", href: "#", disabled: true },
+      { name: "Download Center", href: "#", disabled: true }
     ]
   },
   {
     title: "Legal",
     links: [
-      { name: "Privacy Policy", href: "/about" },
-      { name: "Terms & Conditions", href: "/about" }
+      { name: "Privacy Policy", href: "#", disabled: true },
+      { name: "Terms & Conditions", href: "#", disabled: true }
     ]
   }
 ];

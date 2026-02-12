@@ -53,7 +53,7 @@ export const ContactPage = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-[1200px] mx-auto px-[clamp(16px,3vw,48px)]">
           <div className="flex flex-col items-center gap-4 text-center mb-10 md:mb-12">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#DD005C] to-[#0088B3] px-6 py-1.5 rounded-full">
@@ -71,12 +71,12 @@ export const ContactPage = () => {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-[#F5F5F5] border border-[#EBEBEB] rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col gap-8"
+            className="bg-[#F5F5F5] border border-[#EBEBEB] rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col gap-6 md:gap-8"
           >
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {/* Full Name */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="fullName" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="fullName" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                   Full Name
                 </label>
                 <input
@@ -90,8 +90,8 @@ export const ContactPage = () => {
               </div>
 
               {/* Email */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="email" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                   Email Address
                 </label>
                 <input
@@ -105,8 +105,8 @@ export const ContactPage = () => {
               </div>
 
               {/* Facility */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="facility" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="facility" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                   Facility Name / Institution
                 </label>
                 <input
@@ -119,8 +119,8 @@ export const ContactPage = () => {
               </div>
 
               {/* Service Type */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="serviceType" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="serviceType" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                   Type of Service Needed
                 </label>
                 <div className="relative">
@@ -146,8 +146,8 @@ export const ContactPage = () => {
               </div>
 
               {/* Phone */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="phone" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                   Phone Number
                 </label>
                 <input
@@ -160,8 +160,8 @@ export const ContactPage = () => {
               </div>
 
               {/* Preferred Date & Time */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="datetime" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="datetime" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                   Preferred Date &amp; Time
                 </label>
                 <div className="relative">
@@ -177,8 +177,8 @@ export const ContactPage = () => {
             </div>
 
             {/* Notes */}
-            <div className="flex flex-col gap-2">
-              <label htmlFor="notes" className="text-[#070707] text-base md:text-lg font-medium font-['Montserrat']">
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="notes" className="text-[#070707] text-sm md:text-base font-medium font-['Montserrat']">
                 Additional Notes or Device Details
               </label>
               <textarea
