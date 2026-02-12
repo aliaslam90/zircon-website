@@ -72,7 +72,7 @@ export const SolutionsDentalPage = () => {
       </section>
 
       {/* Main Content Area: Sidebar + Grid */}
-      <section className="pb-32">
+      <section className="pt-12 md:pt-16 pb-32">
         <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
           <div className="flex flex-col lg:flex-row gap-8 items-start relative">
             
