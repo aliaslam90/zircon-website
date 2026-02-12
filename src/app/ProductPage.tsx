@@ -25,8 +25,8 @@ import imgStep4Healing from "figma:asset/87132da5e0764cdee84f42a243756e685a6cc80
 import img6MonthFollowUp from "figma:asset/af78fe4052b5f85331e6efbe5b41a6caf1642b5d.png";
 import img1YearFollowUp from "figma:asset/7d85495cf8878a200fd90e2d2f70dbd3eb612734.png";
 
-// Surgical Kit Assets
-import imgSurgicalKitHero from "../assets/surgical-kit.png";
+// Surgical Kit (served from public so it always loads)
+const imgSurgicalKitHero = "/surgical-kit.png";
 
 // Components
 import { InterchangeableAbutments } from './components/InterchangeableAbutments';
