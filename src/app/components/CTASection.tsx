@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import img3DCancerIconWithScanner2 from "figma:asset/7e2efc14d6625919f00fad1168741e482ff6c378.png";
 import img3DCancerIconWithScanner1 from "figma:asset/24aa6accb92de4e7aee89a2ebc34fc2a19c94cc6.png";
 import svgPaths from "../../imports/svg-4m1rw42oa4";
 
 export function CTASection() {
   return (
-    <section className="relative py-12 px-[clamp(16px,3vw,48px)] w-full bg-black">
+    <section id="contact" className="relative py-12 px-[clamp(16px,3vw,48px)] w-full bg-black">
       <div className="w-full max-w-[1400px] mx-auto rounded-[32px] relative overflow-hidden h-[500px] flex items-center bg-gradient-to-r from-[#DD005C] to-[#0542BD]">
         {/* Background "Zircon" Watermark */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none">
@@ -65,18 +66,24 @@ export function CTASection() {
             </div>
             
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
-              <button className="h-[48px] bg-gradient-to-r from-[#DD005C] to-[#0542BD] pl-6 pr-3 py-1 rounded-full flex items-center justify-center gap-2.5 group cursor-pointer hover:scale-[1.02] transition-all shadow-lg">
+              <Link
+                to="/#contact"
+                className="h-[48px] bg-gradient-to-r from-[#DD005C] to-[#0542BD] pl-6 pr-3 py-1 rounded-full flex items-center justify-center gap-2.5 group cursor-pointer hover:scale-[1.02] transition-all shadow-lg"
+              >
                 <span className="text-white font-semibold text-[15px] font-['Montserrat']">Request Consultation</span>
                 <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                   <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
                     <path d={svgPaths.p2a145500} fill="white" />
                   </svg>
                 </div>
-              </button>
+              </Link>
               
-              <button className="h-[48px] bg-white px-8 py-1 rounded-full flex items-center justify-center min-w-[140px] cursor-pointer hover:bg-gray-100 transition-colors shadow-md">
+              <Link
+                to="/solutions"
+                className="h-[48px] bg-white px-8 py-1 rounded-full flex items-center justify-center min-w-[140px] cursor-pointer hover:bg-gray-100 transition-colors shadow-md"
+              >
                 <span className="text-[#070707] font-semibold text-[15px] font-['Montserrat']">Learn More</span>
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

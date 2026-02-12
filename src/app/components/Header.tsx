@@ -10,11 +10,11 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/about' },
   { name: 'Solutions', href: '#', hasMegaMenu: true },
-  { name: 'Our Partners', href: '#' },
-  { name: 'Doctors Corner', href: '#' },
+  { name: 'Our Partners', href: '/#our-partners' },
+  { name: 'Doctors Corner', href: '/education' },
   { name: 'Events', href: '/events' },
   { name: 'Education', href: '/education' },
-  { name: 'More', href: '#', hasDropdown: true },
+  { name: 'More', href: '/#contact', hasDropdown: true },
 ];
 
 export const Header = () => {
@@ -121,9 +121,12 @@ export const Header = () => {
 
             {/* CTA & Mobile Toggle */}
             <div className="flex items-center gap-2 md:gap-4">
-              <button className="bg-gradient-to-r from-[#DD005C] to-[#0542BD] text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-medium hover:opacity-90 transition-opacity active:scale-95 whitespace-nowrap min-h-[44px] shadow-lg shadow-[#DD005C]/20">
+              <Link
+                to="/#contact"
+                className="bg-gradient-to-r from-[#DD005C] to-[#0542BD] text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-medium hover:opacity-90 transition-opacity active:scale-95 whitespace-nowrap min-h-[44px] shadow-lg shadow-[#DD005C]/20"
+              >
                 Contact Now
-              </button>
+              </Link>
               
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

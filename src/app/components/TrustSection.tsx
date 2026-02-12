@@ -44,7 +44,7 @@ const trustFactors = [
 
 export const TrustSection = () => {
   return (
-    <section className="relative py-16 px-[clamp(16px,3vw,48px)] max-w-[1400px] mx-auto w-full">
+    <section id="trust" className="relative py-16 px-[clamp(16px,3vw,48px)] max-w-[1400px] mx-auto w-full">
       <div className="flex flex-col gap-10 md:gap-12 items-center w-full">
         {/* Title */}
         <motion.div

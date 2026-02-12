@@ -15,29 +15,29 @@ export const SurgicalKitContent = () => {
   return (
     <div className="bg-white">
       {/* Product Overview */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-[#070707] text-3xl md:text-5xl font-bold font-['Montserrat'] mb-6">Product Overview</h2>
-            <p className="text-black/70 text-lg md:text-xl font-['Arial'] leading-relaxed">
+            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight">Product Overview</h2>
+            <p className="text-black/70 text-sm md:text-base font-['Montserrat'] leading-relaxed">
               The Dentium Guided Surgery Kit is available in two configurations to match different clinical needs:
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Left Box: Overview Description */}
-            <div className="bg-gradient-to-br from-[#e3f0fa] to-white p-8 md:p-10 rounded-[32px] border border-[#f3f4f6] flex flex-col justify-center">
+            <div className="bg-gradient-to-br from-[#e3f0fa] to-white p-6 md:p-8 rounded-[24px] border border-[#f3f4f6] flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 bg-[#0542BD]/10 px-4 py-2 rounded-full mb-6 self-start">
                 <Settings size={16} className="text-[#0542BD]" />
-                <span className="text-[#0542BD] text-sm font-bold font-['Arial'] uppercase">Surgical Kit</span>
+                <span className="text-[#0542BD] text-xs font-bold font-['Montserrat'] uppercase tracking-[0.2em]">Surgical Kit</span>
               </div>
-              <h3 className="text-[#323231] text-2xl md:text-3xl font-bold font-['Montserrat'] mb-6">Dentium Guided Surgery Kit</h3>
-              <p className="text-black/80 text-base md:text-lg font-['Arial'] leading-relaxed mb-8">
+              <h3 className="text-[#323231] text-xl md:text-2xl font-semibold font-['Montserrat'] mb-4">Dentium Guided Surgery Kit</h3>
+              <p className="text-black/80 text-sm md:text-base font-['Montserrat'] leading-relaxed mb-6">
                 Designed to support accurate, predictable, and minimally invasive implant placement, the Dentium Guided Surgery Kit offers a complete digital solution for guided implant surgery. Engineered for clinical efficiency, the system provides clear path and depth control while maintaining a streamlined surgical workflow.
               </p>
               <div className="flex flex-wrap gap-3">
                 {['Faster Healing', 'Higher Success Rate', 'Proven Results'].map((tag) => (
-                  <span key={tag} className="bg-white/80 border border-[#0542BD]/20 px-4 py-1.5 rounded-full text-[#0542BD] text-sm font-medium">
+                  <span key={tag} className="bg-white/80 border border-[#0542BD]/20 px-3 py-1.5 rounded-full text-[#0542BD] text-xs font-medium">
                     {tag}
                   </span>
                 ))}
@@ -45,7 +45,7 @@ export const SurgicalKitContent = () => {
             </div>
 
             {/* Right Box: Sequence Image */}
-            <div className="bg-gradient-to-br from-[#e3f0fa] to-white p-8 md:p-10 rounded-[32px] border border-[#f3f4f6] flex items-center justify-center overflow-hidden">
+            <div className="bg-gradient-to-br from-[#e3f0fa] to-white p-6 md:p-8 rounded-[24px] border border-[#f3f4f6] flex items-center justify-center overflow-hidden">
                <div className="w-full aspect-[16/9] relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#0542BD]/20 to-[#00FFFF]/20">
                   <img src={imgSequenceOverview} alt="Drilling Sequence" className="absolute inset-0 w-full h-full object-cover" />
                </div>
@@ -71,27 +71,27 @@ export const SurgicalKitContent = () => {
       </section>
 
       {/* Key Clinical Benefits */}
-      <section className="py-20 md:py-32 bg-black relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-100">
           <img src={imgGridBg} alt="" className="w-full h-full object-cover" />
         </div>
         
         <div className="max-w-[1260px] mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
             {/* Drills Image */}
             <div className="w-full lg:w-1/2">
-              <div className="bg-white rounded-[40px] p-6 shadow-2xl relative">
-                <div className="aspect-[4/3] rounded-[24px] overflow-hidden bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] flex items-center justify-center p-8">
+              <div className="bg-white rounded-[32px] p-5 shadow-2xl relative">
+                <div className="aspect-[4/3] rounded-[20px] overflow-hidden bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] flex items-center justify-center p-6">
                   <img src={imgClinicalBenefits} alt="Guide Drills" className="w-full h-full object-contain" />
                 </div>
-                <div className="flex justify-between items-center mt-6 px-4">
+                <div className="flex justify-between items-center mt-4 px-3">
                   <div>
-                    <span className="block text-xs uppercase tracking-[0.7px] text-black/60 mb-1">Material Grade</span>
-                    <span className="block font-bold text-xl md:text-2xl text-[#323231]">CP Grade 4</span>
+                    <span className="block text-[10px] uppercase tracking-[0.2em] text-black/60 mb-1">Material Grade</span>
+                    <span className="block font-semibold text-base md:text-lg text-[#323231]">CP Grade 4</span>
                   </div>
                   <div className="text-right">
-                    <span className="block text-xs uppercase tracking-[0.7px] text-black/60 mb-1">Standard</span>
-                    <span className="block font-bold text-xl md:text-2xl text-[#344ecc]">ASTM F67</span>
+                    <span className="block text-[10px] uppercase tracking-[0.2em] text-black/60 mb-1">Standard</span>
+                    <span className="block font-semibold text-base md:text-lg text-[#344ecc]">ASTM F67</span>
                   </div>
                 </div>
               </div>
@@ -103,8 +103,8 @@ export const SurgicalKitContent = () => {
                 <Target size={16} className="text-white" />
                 <span className="text-white text-xs font-bold font-['Montserrat'] uppercase tracking-widest">Product Specification</span>
               </div>
-              <h2 className="text-white text-3xl md:text-5xl font-bold font-['Montserrat'] mb-10 leading-tight">Key Clinical Benefits</h2>
-              <div className="space-y-6">
+              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-6 leading-tight">Key Clinical Benefits</h2>
+              <div className="space-y-5">
                 {[
                   "Accurate path and depth control for predictable implant placement",
                   "Reduced surgical variability and improved safety",
@@ -116,7 +116,7 @@ export const SurgicalKitContent = () => {
                     <div className="bg-[#344ecc] rounded-full size-6 flex items-center justify-center shrink-0 mt-1">
                       <Check size={14} className="text-white" strokeWidth={3} />
                     </div>
-                    <p className="text-white text-base md:text-lg font-['Montserrat']">{benefit}</p>
+                    <p className="text-white text-sm md:text-base font-['Montserrat'] leading-relaxed">{benefit}</p>
                   </div>
                 ))}
               </div>
@@ -126,20 +126,20 @@ export const SurgicalKitContent = () => {
       </section>
 
       {/* Digital Full Kit (XGSFK) - Drilling Sequence */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-14">
             <div className="inline-flex items-center gap-2 bg-[#d3e2f5] px-4 py-2 rounded-full mb-4">
               <Layers size={16} className="text-[#344ecc]" />
-              <span className="text-[#344ecc] text-xs font-bold font-['Montserrat'] uppercase tracking-widest">Unified Prosthetic Platform</span>
+              <span className="text-[#344ecc] text-xs font-bold font-['Montserrat'] uppercase tracking-[0.2em]">Unified Prosthetic Platform</span>
             </div>
-            <h2 className="text-[#070707] text-3xl md:text-5xl font-bold font-['Montserrat'] mb-4">Digital Full Kit (XGSFK)</h2>
-            <p className="text-black/60 text-lg md:text-xl font-['Arial']">SuperLine FX4510SWC Drilling Sequence</p>
+            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-2 leading-tight">Digital Full Kit (XGSFK)</h2>
+            <p className="text-black/60 text-sm md:text-base font-['Montserrat']">SuperLine FX4510SWC Drilling Sequence</p>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
             {/* List */}
-            <div className="w-full lg:w-auto space-y-6">
+            <div className="w-full lg:w-auto space-y-5">
               {[
                 "Tissue Punch",
                 "Flat Drill",
@@ -147,23 +147,23 @@ export const SurgicalKitContent = () => {
                 "Final Drill (FX 36, FX 40, FX 45 options)",
                 "Adapter for implant placement"
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-5">
-                  <div className="bg-[#d3e2f5] rounded-xl size-12 flex items-center justify-center shrink-0">
-                    <Check size={24} className="text-[#344ecc]" strokeWidth={2.5} />
+                <div key={i} className="flex items-center gap-4">
+                  <div className="bg-[#d3e2f5] rounded-xl size-10 flex items-center justify-center shrink-0">
+                    <Check size={18} className="text-[#344ecc]" strokeWidth={2.5} />
                   </div>
-                  <h4 className="text-black text-lg md:text-xl font-bold font-['Montserrat']">{item}</h4>
+                  <h4 className="text-black text-base md:text-lg font-semibold font-['Montserrat']">{item}</h4>
                 </div>
               ))}
             </div>
 
             {/* Image Box */}
-            <div className="w-full max-w-[650px]">
-              <div className="backdrop-blur-[2px] bg-white border border-[#f3f4f6] rounded-[32px] p-8 md:p-12 shadow-sm flex flex-col items-center gap-8">
+            <div className="w-full max-w-[600px]">
+              <div className="backdrop-blur-[2px] bg-white border border-[#f3f4f6] rounded-[28px] p-6 md:p-10 shadow-sm flex flex-col items-center gap-6">
                 <div className="w-full aspect-[2.5/1] relative">
                   <img src={imgComponentsBreakdown} alt="Components Breakdown" className="w-full h-full object-contain" />
                 </div>
-                <div className="w-full h-px bg-black/10 pt-8 mt-4 text-center">
-                  <p className="text-sm font-['Montserrat'] text-black/60">
+                <div className="w-full h-px bg-black/10 pt-6 mt-3 text-center">
+                  <p className="text-xs md:text-sm font-['Montserrat'] text-black/60">
                     All sizes share <span className="font-bold text-[#344ecc]">one universal connection</span>
                   </p>
                 </div>
@@ -174,17 +174,17 @@ export const SurgicalKitContent = () => {
       </section>
 
       {/* FX3610 Drilling Sequence */}
-      <section className="py-20 md:py-32 bg-black relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-100">
           <img src={imgGridBg} alt="" className="w-full h-full object-cover" />
         </div>
         
         <div className="max-w-[1260px] mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16">
             {/* Drills Image */}
             <div className="w-full lg:w-1/2">
-              <div className="bg-white rounded-[40px] p-6 shadow-2xl relative">
-                <div className="aspect-[4/3] rounded-[24px] overflow-hidden bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] flex items-center justify-center p-8">
+              <div className="bg-white rounded-[32px] p-5 shadow-2xl relative">
+                <div className="aspect-[4/3] rounded-[20px] overflow-hidden bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] flex items-center justify-center p-6">
                   <img src={imgSequenceFX3610} alt="FX3610 Drilling Sequence" className="w-full h-full object-contain" />
                 </div>
               </div>
@@ -196,14 +196,14 @@ export const SurgicalKitContent = () => {
                 <Settings size={16} className="text-white" />
                 <span className="text-white text-xs font-bold font-['Montserrat'] uppercase tracking-widest">Prosthetic Flexibility</span>
               </div>
-              <h2 className="text-white text-3xl md:text-5xl font-bold font-['Montserrat'] mb-10 leading-tight">SuperLine FX3610SWC Drilling Sequence</h2>
+              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-6 leading-tight">SuperLine FX3610SWC Drilling Sequence</h2>
               <div className="space-y-6">
                 {["Tissue Punch", "Flat Drill", "Guide Drill", "Final Drill (FX 36)"].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="bg-[#344ecc] rounded-full size-6 flex items-center justify-center shrink-0 mt-1">
                       <Check size={14} className="text-white" strokeWidth={3} />
                     </div>
-                    <p className="text-white text-base md:text-lg font-['Montserrat']">{item}</p>
+                    <p className="text-white text-sm md:text-base font-['Montserrat'] leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
@@ -213,16 +213,16 @@ export const SurgicalKitContent = () => {
       </section>
 
       {/* Kit Components Cards */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-[#070707] text-3xl md:text-5xl font-bold font-['Montserrat'] mb-6">Kit Components</h2>
-            <p className="text-[#6b7280] text-lg md:text-xl font-['Arial'] max-w-2xl mx-auto">
+          <div className="text-center mb-12 md:mb-14">
+            <h2 className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight">Kit Components</h2>
+            <p className="text-[#6b7280] text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto">
               Every detail engineered for optimal clinical outcomes.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               { 
                 title: 'Guide Drills', 
@@ -240,16 +240,16 @@ export const SurgicalKitContent = () => {
                 path: svgPaths.p2b642900 
               }
             ].map((card, i) => (
-              <div key={i} className="bg-white rounded-[32px] p-8 border border-[#dd005c] flex flex-col gap-6 group hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-[#dd005c] to-[#0088b3] size-14 rounded-full flex items-center justify-center p-3 text-white">
+              <div key={i} className="bg-white rounded-[28px] p-6 border border-[#dd005c] flex flex-col gap-5 group hover:shadow-xl transition-all duration-300">
+                <div className="bg-gradient-to-r from-[#dd005c] to-[#0088b3] size-12 rounded-full flex items-center justify-center p-2.5 text-white">
                    <svg fill="none" viewBox="0 0 24 24" className="size-full">
                       <path d={card.path} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                    </svg>
                 </div>
                 <div className="space-y-4">
                   <div className="h-px bg-[#EBEBEB] w-full" />
-                  <h3 className="text-[#070707] text-2xl font-bold font-['Montserrat']">{card.title}</h3>
-                  <p className="text-[#454545] text-sm font-['Arial'] leading-relaxed">{card.desc}</p>
+                  <h3 className="text-[#070707] text-xl font-semibold font-['Montserrat']">{card.title}</h3>
+                  <p className="text-[#454545] text-sm font-['Montserrat'] leading-relaxed">{card.desc}</p>
                 </div>
               </div>
             ))}

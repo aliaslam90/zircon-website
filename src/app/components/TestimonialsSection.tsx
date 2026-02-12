@@ -97,7 +97,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="relative bg-[#fafbff] py-16 overflow-hidden w-full">
+    <section id="testimonials" className="relative bg-[#fafbff] py-16 overflow-hidden w-full">
       {/* Background Pattern - subtle */}
       <div className="absolute inset-0 z-0 opacity-[0.05] grayscale pointer-events-none">
         <img 

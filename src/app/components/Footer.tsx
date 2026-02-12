@@ -9,8 +9,8 @@ const footerLinks = [
     title: "Home",
     links: [
       { name: "About Us", href: "/about" },
-      { name: "Our Partners", href: "#" },
-      { name: "Careers", href: "#" }
+      { name: "Our Partners", href: "/#our-partners" },
+      { name: "Careers", href: "/about" }
     ]
   },
   {
@@ -18,24 +18,24 @@ const footerLinks = [
     links: [
       { name: "Dental Solutions", href: "/solutions/dental" },
       { name: "Medical Solutions", href: "/solutions/medical" },
-      { name: "Doctors Corner", href: "#" },
-      { name: "Education & Learning", href: "#" }
+      { name: "Doctors Corner", href: "/education" },
+      { name: "Education & Learning", href: "/education" }
     ]
   },
   {
     title: "Resources",
     links: [
-      { name: "Events", href: "#" },
-      { name: "Testimonials", href: "#" },
-      { name: "FAQ", href: "#" },
-      { name: "Download Center", href: "#" }
+      { name: "Events", href: "/events" },
+      { name: "Testimonials", href: "/#testimonials" },
+      { name: "FAQ", href: "/about" },
+      { name: "Download Center", href: "/solutions" }
     ]
   },
   {
     title: "Legal",
     links: [
-      { name: "Privacy Policy", href: "#" },
-      { name: "Terms & Conditions", href: "#" }
+      { name: "Privacy Policy", href: "/about" },
+      { name: "Terms & Conditions", href: "/about" }
     ]
   }
 ];

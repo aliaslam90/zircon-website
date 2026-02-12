@@ -82,7 +82,7 @@ const getIcon = (type: string) => {
 
 export const SectorsSection = () => {
   return (
-    <section className="relative w-full overflow-hidden flex flex-col items-center py-10 md:py-14 bg-[#070707]">
+    <section id="our-partners" className="relative w-full overflow-hidden flex flex-col items-center py-10 md:py-14 bg-[#070707]">
       {/* Background with Dark Overlays */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img src={imgDesktop119} alt="Background" className="w-full h-full object-cover scale-110" />

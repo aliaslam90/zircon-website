@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
@@ -37,7 +37,87 @@ const HomePage = () => (
 
 function AppLayout() {
   const location = useLocation();
+  const navigationType = useNavigationType();
   const isHome = location.pathname === '/';
+
+  // Basic SEO-friendly document titles based on current route
+  useEffect(() => {
+    const segments = location.pathname.split('/').filter(Boolean);
+    let pageTitle = 'Home';
+
+    if (segments[0] === 'about') {
+      pageTitle = 'About Us';
+    } else if (segments[0] === 'solutions') {
+      if (segments.length === 1) {
+        pageTitle = 'Solutions';
+      } else if (segments.length === 2) {
+        // /solutions/:typeId
+        pageTitle = `${segments[1].replace(/-/g, ' ')} Solutions`;
+      } else if (segments.length === 3) {
+        // /solutions/:typeId/:categoryId
+        pageTitle = `${segments[2].replace(/-/g, ' ')} – Category`;
+      } else if (segments.length >= 4) {
+        // /solutions/:typeId/:categoryId/:productId
+        pageTitle = `${segments[3].replace(/-/g, ' ')} – Product`;
+      }
+    } else if (segments[0] === 'education') {
+      pageTitle = 'Education';
+    } else if (segments[0] === 'events') {
+      pageTitle = 'Events';
+    }
+
+    // Fallback: capitalize words
+    pageTitle = pageTitle
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
+    document.title = `${pageTitle} | Zircon Medical Equipment`;
+  }, [location.pathname, location.search]);
+
+  // Scroll restoration:
+  // - On normal navigation (links), scroll to top or hash target
+  // - On back/forward (POP), restore previous scroll position
+  const scrollPositions = useRef<Record<string, { x: number; y: number }>>({});
+
+  // Save scroll position before route changes
+  useEffect(() => {
+    const key = location.key || `${location.pathname}${location.search}`;
+    return () => {
+      scrollPositions.current[key] = { x: window.scrollX, y: window.scrollY };
+    };
+  }, [location]);
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    const key = location.key || `${location.pathname}${location.search}`;
+
+    // Back/forward navigation: restore previous scroll position if we have it
+    if (navigationType === 'POP') {
+      const stored = scrollPositions.current[key];
+      if (stored) {
+        window.scrollTo(stored.x, stored.y);
+        return;
+      }
+    }
+
+    // If URL has a hash, try to scroll to that section
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        return;
+      }
+    }
+
+    // Default: scroll to top for new pages
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location, navigationType]);
+
   return (
     <div className={`min-h-screen font-['Montserrat',sans-serif] selection:bg-[#DD005C] selection:text-white relative ${isHome ? 'bg-black' : 'bg-white'}`}>
       <Header />
