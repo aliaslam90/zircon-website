@@ -49,7 +49,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] mb-6 md:mb-8 max-w-5xl mx-auto drop-shadow-2xl"
         >
-          Powering <span className="text-[#dd005c]">Dental</span> Solutions, <span className="text-[#dd005c]">Medical</span> Equipments Innovation for a <span className="text-[#dd005c]">Healthier</span> Tomorrow
+          Powering <span className="text-[#dd005c]">Dental</span> Solutions, <span className="text-[#dd005c]">Medical</span> Equipments <span className="text-[#dd005c]">Innovation</span> for a <span className="text-[#dd005c]">Healthier</span> Tomorrow
         </motion.h1>
 
         {/* Subheadline */}
