@@ -57,7 +57,7 @@ export const SolutionsDentalPage = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight"
             >
-              Comprehensive Healthcare <br /> Solutions Portfolio
+              Advanced Dental Solutions
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -65,32 +65,9 @@ export const SolutionsDentalPage = () => {
               transition={{ delay: 0.1 }}
               className="text-white/80 text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto leading-relaxed"
             >
-              From dental implants to medical equipment, we provide end-to-end solutions for modern healthcare facilities.
+              Our comprehensive portfolio supports precision, efficiency, and confidence across modern healthcare environments. Each solution is carefully curated to meet the highest standards of quality, clinical relevance, and reliability.
             </motion.p>
           </div>
-        </div>
-      </section>
-
-      {/* Intro Text */}
-      <section className="py-20 md:pt-28 md:pb-16 text-center">
-        <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)]">
-          <motion.h2 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[#070707] text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-6"
-          >
-            Advanced Dental Solutions
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-[#4A4A4A] text-base md:text-lg max-w-4xl mx-auto font-['Montserrat'] leading-relaxed"
-          >
-            Our comprehensive portfolio supports precision, efficiency, and confidence across modern healthcare environments. Each solution is carefully curated to meet the highest standards of quality, clinical relevance, and reliability.
-          </motion.p>
         </div>
       </section>
 
