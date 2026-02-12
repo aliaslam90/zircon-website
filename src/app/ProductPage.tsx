@@ -53,79 +53,76 @@ export const ProductPage = () => {
 
   if (!hasFullContent) {
     return (
-      <div className="bg-white min-h-screen flex flex-col pt-[100px]">
-        {/* Breadcrumbs - Persistent */}
-        <div className="bg-black py-4">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <div className="flex items-center gap-1.5 text-[#ABABAB] text-[9px] font-['Montserrat'] font-medium uppercase tracking-wider">
+      <div className="bg-white min-h-screen">
+        {/* Hero Section for products without full content */}
+        <section className="bg-black pt-[136px] sm:pt-[140px] md:pt-[144px] pb-16 md:pb-20 relative overflow-hidden">
+          <div className="absolute inset-0 z-0 opacity-40">
+            <img src={imgGroup381671} alt="" className="w-full h-full object-cover" />
+          </div>
+
+          <div className="max-w-[1600px] mx-auto px-[clamp(16px,3vw,48px)] relative z-10">
+            {/* Breadcrumbs */}
+            <div className="flex items-center gap-1.5 mb-6 text-[#ABABAB] text-[10px] font-['Montserrat'] font-medium uppercase tracking-[0.2em]">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
-              <ChevronRight size={8} />
+              <ChevronRight size={12} className="text-[#ABABAB]" />
               <Link to="/solutions" className="hover:text-white transition-colors">Solutions</Link>
-              <ChevronRight size={8} />
+              <ChevronRight size={12} className="text-[#ABABAB]" />
               <Link to={`/solutions/${typeId}`} className="hover:text-white transition-colors">{typeData?.name}</Link>
-              <ChevronRight size={8} />
+              <ChevronRight size={12} className="text-[#ABABAB]" />
               <Link to={`/solutions/${typeId}/${categoryId}`} className="hover:text-white transition-colors">{categoryData?.name}</Link>
-              <ChevronRight size={8} />
+              <ChevronRight size={12} className="text-[#DD005C]" />
               <span className="text-[#DD005C]">{product.name}</span>
             </div>
-          </div>
-        </div>
 
-        <section className="flex-1 flex items-center justify-center py-20 px-6">
-          <div className="max-w-xl w-full text-center">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-[#0542BD]/5 size-20 rounded-2xl flex items-center justify-center mx-auto mb-8"
-            >
-              <Layers className="text-[#0542BD]" size={32} />
-            </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-[#070707] text-4xl font-bold font-['Montserrat'] mb-4"
-            >
-              {product.name}
-            </motion.h1>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 bg-[#DD005C]/10 px-4 py-2 rounded-full mb-8"
-            >
-              <div className="size-2 rounded-full bg-[#DD005C] animate-pulse" />
-              <span className="text-[#DD005C] text-xs font-bold font-['Montserrat'] uppercase tracking-widest">Coming Soon</span>
-            </motion.div>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-black/60 text-lg font-['Arial'] leading-relaxed mb-10"
-            >
-              We are currently preparing detailed clinical specifications and high-resolution assets for this solution. 
-              Full product information will be available shortly.
-            </motion.p>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            >
-              <Link 
-                to={`/solutions/${typeId}/${categoryId}`}
-                className="w-full sm:w-auto bg-[#070707] text-white px-8 py-4 rounded-full font-bold font-['Montserrat'] flex items-center justify-center gap-3 hover:bg-black/90 transition-all"
+            <div className="text-center max-w-3xl mx-auto">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] mb-4 leading-tight"
               >
-                Back to {categoryData?.name}
-                <ArrowRight size={18} />
-              </Link>
-              <button className="w-full sm:w-auto border border-black/10 px-8 py-4 rounded-full font-bold font-['Montserrat'] hover:bg-gray-50 transition-all">
-                Request Early Access
-              </button>
-            </motion.div>
+                {product.name}
+              </motion.h1>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="inline-flex items-center gap-2 bg-[#DD005C]/10 px-4 py-2 rounded-full mb-6"
+              >
+                <div className="size-2 rounded-full bg-[#DD005C] animate-pulse" />
+                <span className="text-[#DD005C] text-xs font-bold font-['Montserrat'] uppercase tracking-[0.2em]">
+                  Coming Soon
+                </span>
+              </motion.div>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-white/80 text-sm md:text-base font-['Montserrat'] max-w-2xl mx-auto leading-relaxed mb-8"
+              >
+                We are currently preparing detailed clinical specifications and high-resolution assets for this solution. 
+                Full product information will be available shortly.
+              </motion.p>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              >
+                <Link 
+                  to={`/solutions/${typeId}/${categoryId}`}
+                  className="w-full sm:w-auto bg-gradient-to-r from-[#DD005C] to-[#0542BD] text-white px-8 py-3 rounded-full text-xs font-semibold font-['Montserrat'] flex items-center justify-center gap-3 hover:opacity-90 transition-all"
+                >
+                  Back to {categoryData?.name}
+                  <ArrowRight size={16} />
+                </Link>
+                <button className="w-full sm:w-auto border border-white/20 text-white px-8 py-3 rounded-full text-xs font-semibold font-['Montserrat'] hover:bg-white/10 transition-all">
+                  Request Early Access
+                </button>
+              </motion.div>
+            </div>
           </div>
         </section>
       </div>
