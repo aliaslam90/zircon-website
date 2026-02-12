@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import svgPaths from "../../imports/svg-76zdggpx2y";
 import heroVideo from '@/assets/hero-video.mp4';
 
@@ -66,14 +67,17 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <button className="w-full sm:w-auto min-h-[48px] group bg-gradient-to-r from-[#DD005C] to-[#0088b3] text-white pl-6 pr-3 py-2.5 rounded-full flex items-center justify-center gap-2.5 font-semibold text-[15px] transition-all hover:scale-[1.05] hover:shadow-[0_0_20px_rgba(221,0,92,0.4)] cursor-pointer">
+          <Link
+            to="/contact"
+            className="w-full sm:w-auto min-h-[48px] group bg-gradient-to-r from-[#DD005C] to-[#0088b3] text-white pl-6 pr-3 py-2.5 rounded-full flex items-center justify-center gap-2.5 font-semibold text-[15px] transition-all hover:scale-[1.05] hover:shadow-[0_0_20px_rgba(221,0,92,0.4)] cursor-pointer"
+          >
             Request Consultation
             <div className="bg-white/20 rounded-full p-1 group-hover:bg-white/40 transition-colors">
               <svg className="w-5 h-5" viewBox="0 0 32 32" fill="none">
                 <path d={svgPaths.p2a145500} fill="white" />
               </svg>
             </div>
-          </button>
+          </Link>
           <button className="w-full sm:w-auto min-h-[48px] bg-white text-[#070707] px-8 py-2.5 rounded-full font-semibold text-[15px] hover:bg-gray-100 transition-all cursor-pointer shadow-lg">
             Request a Quote
           </button>

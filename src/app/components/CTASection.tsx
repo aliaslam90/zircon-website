@@ -67,7 +67,7 @@ export function CTASection() {
             
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
               <Link
-                to="/#contact"
+                to="/contact"
                 className="h-[48px] bg-gradient-to-r from-[#DD005C] to-[#0542BD] pl-6 pr-3 py-1 rounded-full flex items-center justify-center gap-2.5 group cursor-pointer hover:scale-[1.02] transition-all shadow-lg"
               >
                 <span className="text-white font-semibold text-[15px] font-['Montserrat']">Request Consultation</span>

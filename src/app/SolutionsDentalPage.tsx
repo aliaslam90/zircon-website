@@ -206,9 +206,12 @@ export const SolutionsDentalPage = () => {
                   <button className="px-4 py-2.5 rounded-full border border-[#DD005C] text-[#DD005C] font-semibold font-['Montserrat'] text-xs hover:bg-[#DD005C] hover:text-white transition-all">
                     Download Catalogue
                   </button>
-                  <button className="bg-gradient-to-r from-[#DD005C] to-[#0088b3] text-white px-5 py-2.5 rounded-full text-xs font-semibold font-['Montserrat'] hover:opacity-90 shadow-md shadow-[#DD005C]/20">
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-[#DD005C] to-[#0088b3] text-white px-5 py-2.5 rounded-full text-xs font-semibold font-['Montserrat'] hover:opacity-90 shadow-md shadow-[#DD005C]/20"
+                  >
                     Contact Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

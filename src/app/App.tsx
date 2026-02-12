@@ -19,6 +19,7 @@ import { CategoryPage } from './CategoryPage';
 import { ProductPage } from './ProductPage';
 import { EducationPage } from './EducationPage';
 import { EventsPage } from './EventsPage';
+import { ContactPage } from './ContactPage';
 
 const HomePage = () => (
   <>
@@ -64,6 +65,8 @@ function AppLayout() {
       pageTitle = 'Education';
     } else if (segments[0] === 'events') {
       pageTitle = 'Events';
+    } else if (segments[0] === 'contact') {
+      pageTitle = 'Contact Us';
     }
 
     // Fallback: capitalize words
@@ -134,6 +137,7 @@ function AppLayout() {
           <Route path="/solutions/:typeId/:categoryId/:productId" element={<ProductPage />} />
           <Route path="/education" element={<EducationPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />
