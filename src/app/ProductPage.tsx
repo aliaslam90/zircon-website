@@ -179,8 +179,8 @@ export const ProductPage = () => {
             <span className="text-[#DD005C]">{product.name}</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 w-full">
-            <div className="w-full max-w-2xl">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-6 w-full">
+            <div className="w-full max-w-xl">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -235,13 +235,13 @@ export const ProductPage = () => {
               </div>
             </div>
 
-            <motion.div 
+              <motion.div
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className={`relative w-full flex justify-center lg:justify-end ${isSurgicalKit ? 'max-w-[650px]' : 'max-w-[500px]'}`}
+              className={`relative w-full flex justify-center lg:justify-end ${isSurgicalKit ? 'max-w-[580px]' : 'max-w-[420px]'}`}
             >
-              <div className={`w-full relative ${isSurgicalKit ? 'h-[350px] md:h-[400px]' : 'h-[300px] md:h-[450px]'}`}>
+              <div className={`w-full relative ${isSurgicalKit ? 'h-[340px] md:h-[380px]' : 'h-[280px] md:h-[380px]'}`}>
                 {isSurgicalKit ? (
                   <img 
                     src={heroImage} 
@@ -250,7 +250,7 @@ export const ProductPage = () => {
                   />
                 ) : (
                   <div className="content-stretch flex flex-col items-center justify-center relative size-full" data-name="Container">
-                    <div className="h-[399px] relative shrink-0 w-[500px]" data-name="image 12">
+                    <div className="h-[360px] relative shrink-0 w-[420px]" data-name="image 12">
                       <img 
                         alt={product.name} 
                         className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
