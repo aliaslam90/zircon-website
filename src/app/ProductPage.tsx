@@ -236,14 +236,14 @@ export const ProductPage = () => {
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className={`relative w-full flex justify-center lg:justify-end ${isSurgicalKit ? 'max-w-[580px]' : 'max-w-[420px]'}`}
+              className={`relative w-full flex justify-center lg:justify-end ${isSurgicalKit ? 'max-w-[380px] md:max-w-[420px]' : 'max-w-[420px]'}`}
             >
-              <div className={`w-full relative ${isSurgicalKit ? 'h-[340px] md:h-[380px]' : 'h-[280px] md:h-[380px]'}`}>
+              <div className={`w-full relative ${isSurgicalKit ? 'h-[260px] md:h-[300px]' : 'h-[280px] md:h-[380px]'}`}>
                 {isSurgicalKit ? (
                   <img 
                     src={heroImage} 
                     alt={product.name} 
-                    className="w-full h-full object-contain pointer-events-none drop-shadow-2xl scale-125 md:scale-150" 
+                    className="w-full h-full object-contain object-center pointer-events-none drop-shadow-2xl" 
                   />
                 ) : (
                   <div className="content-stretch flex flex-col items-center justify-center relative size-full" data-name="Container">
