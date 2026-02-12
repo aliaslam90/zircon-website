@@ -209,7 +209,7 @@ export const Header = () => {
                       ) : link.disabled ? (
                         <button
                           type="button"
-                          className="text-white/50 text-base font-medium py-3 transition-colors border-b border-white/5 last:border-0 cursor-default"
+                          className="w-full text-left text-white/50 text-base font-medium py-3 transition-colors border-b border-white/5 last:border-0 cursor-default"
                           disabled
                         >
                           {link.name}
