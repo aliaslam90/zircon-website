@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import imgKeyValue from "figma:asset/b105e1a4b830e46319b9138d0315752d28ed4e25.png";
 import imgPattern from "figma:asset/fcbf1a6ae17a709a798622b42a2fa36aaa09fb29.png";
@@ -55,7 +56,10 @@ export const AboutKeyValue = () => {
               </div>
             </div>
 
-            <button className="self-start h-[48px] bg-gradient-to-r from-[#dd005c] to-[#0542BD] pl-6 pr-1.5 rounded-full flex items-center gap-4 group cursor-pointer hover:scale-[1.02] transition-all shadow-xl active:scale-95">
+            <Link
+              to="/contact"
+              className="self-start h-[48px] bg-gradient-to-r from-[#dd005c] to-[#0542BD] pl-6 pr-1.5 rounded-full flex items-center gap-4 group cursor-pointer hover:scale-[1.02] transition-all shadow-xl active:scale-95"
+            >
               <span className="text-white font-bold text-[10px] uppercase tracking-widest font-['Montserrat']">Book Now</span>
               <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center group-hover:bg-white/90 transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="rotate-0 transition-transform group-hover:translate-x-0.5">
@@ -64,7 +68,7 @@ export const AboutKeyValue = () => {
                   <path d="M14 7L19 12" stroke="#0542BD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

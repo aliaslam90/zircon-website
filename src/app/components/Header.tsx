@@ -92,8 +92,10 @@ export const Header = () => {
                       onClick={toggleMegaMenu}
                       aria-expanded={megaMenuOpen}
                       aria-controls="solutions-mega-menu"
-                      className={`group flex items-center gap-1 text-white text-[13px] xl:text-[14px] font-medium hover:text-[#0088B3] transition-colors whitespace-nowrap px-3 py-2 rounded-full cursor-pointer ${
-                        location.pathname.startsWith('/solutions') ? 'text-[#0088B3]' : ''
+                      className={`group flex items-center gap-1 text-[13px] xl:text-[14px] font-medium hover:text-[#0088B3] transition-colors whitespace-nowrap px-3 py-2 rounded-full cursor-pointer ${
+                        location.pathname.startsWith('/solutions')
+                          ? 'text-[#0088B3] bg-white/10'
+                          : 'text-white'
                       }`}
                     >
                       {link.name}
@@ -115,8 +117,10 @@ export const Header = () => {
                   ) : (
                     <Link
                       to={link.href.startsWith('#') ? '#' : link.href}
-                      className={`group flex items-center gap-1 text-white text-[13px] xl:text-[14px] font-medium hover:text-[#0088B3] transition-colors whitespace-nowrap px-3 py-2 rounded-full ${
-                        location.pathname === link.href ? 'text-[#0088B3]' : ''
+                      className={`group flex items-center gap-1 text-[13px] xl:text-[14px] font-medium hover:text-[#0088B3] transition-colors whitespace-nowrap px-3 py-2 rounded-full ${
+                        location.pathname === link.href
+                          ? 'text-[#0088B3] bg-white/10'
+                          : 'text-white'
                       }`}
                     >
                       {link.name}
@@ -166,7 +170,9 @@ export const Header = () => {
                         <>
                           <button
                             onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
-                            className="flex items-center justify-between text-white text-base font-medium py-3 border-b border-white/5"
+                            className={`flex items-center justify-between text-base font-medium py-3 border-b border-white/5 ${
+                              location.pathname.startsWith('/solutions') ? 'text-[#0088B3]' : 'text-white'
+                            }`}
                           >
                             {link.name}
                             {mobileSolutionsOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -218,7 +224,9 @@ export const Header = () => {
                         <Link
                           to={link.href.startsWith('#') ? '#' : link.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="text-white text-base font-medium hover:text-[#0088B3] py-3 transition-colors border-b border-white/5 last:border-0"
+                          className={`text-base font-medium hover:text-[#0088B3] py-3 transition-colors border-b border-white/5 last:border-0 ${
+                            location.pathname === link.href ? 'text-[#0088B3]' : 'text-white'
+                          }`}
                         >
                           {link.name}
                         </Link>

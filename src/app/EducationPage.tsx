@@ -221,10 +221,10 @@ export const EducationPage = () => {
       </section>
 
       {/* Clinical Case Studies Section */}
-      <section className="py-24 bg-black">
+      <section className="py-16 md:py-20 bg-black">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="flex flex-col items-center text-center mb-16">
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-4">
+          <div className="flex flex-col items-center text-center mb-10 md:mb-12">
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium font-['Montserrat'] leading-tight mb-3">
               Clinical Case Studies
             </h2>
             <p className="text-white/60 text-sm md:text-base font-['Montserrat']">
@@ -232,7 +232,7 @@ export const EducationPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {caseStudies.map((study, idx) => (
               <motion.div 
                 key={study.id}
@@ -240,9 +240,9 @@ export const EducationPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-[24px] p-3.5 flex flex-col h-full group shadow-lg"
+                className="bg-white rounded-[20px] p-3 flex flex-col h-full group shadow-lg"
               >
-                <div className="aspect-[4/3] rounded-[24px] overflow-hidden mb-8 relative">
+                <div className="aspect-[16/10] rounded-[16px] overflow-hidden mb-4 relative">
                   <ImageWithFallback 
                     src={study.image} 
                     alt={study.title} 
@@ -250,31 +250,31 @@ export const EducationPage = () => {
                   />
                 </div>
                 
-                <div className="px-2 pb-2 flex-grow">
-                  <h3 className="text-[#070707] text-2xl font-bold font-['Montserrat'] mb-6 group-hover:text-[#0542BD] transition-colors leading-tight">
+                <div className="px-1.5 pb-1.5 flex-grow">
+                  <h3 className="text-[#070707] text-lg md:text-xl font-bold font-['Montserrat'] mb-3 group-hover:text-[#0542BD] transition-colors leading-tight">
                     {study.title}
                   </h3>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <User size={14} className="text-[#323231]" />
-                      <span className="text-[#323231] text-sm font-['Montserrat']">{study.author}</span>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1.5">
+                      <User size={12} className="text-[#323231]" />
+                      <span className="text-[#323231] text-xs font-['Montserrat']">{study.author}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar size={14} className="text-[#323231]" />
-                      <span className="text-[#323231] text-sm font-['Montserrat']">{study.date}</span>
+                    <div className="flex items-center gap-1.5">
+                      <Calendar size={12} className="text-[#323231]" />
+                      <span className="text-[#323231] text-xs font-['Montserrat']">{study.date}</span>
                     </div>
                   </div>
                   
-                  <div className="pt-4 border-t border-[#f3f4f6] flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[#323231]">
-                      <Download size={14} />
-                      <span className="text-sm font-['Montserrat']">{study.downloads}</span>
+                  <div className="pt-3 border-t border-[#f3f4f6] flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-[#323231]">
+                      <Download size={12} />
+                      <span className="text-xs font-['Montserrat']">{study.downloads}</span>
                     </div>
                     
-                    <button className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-[#f3f4f6] transition-colors group/pdf">
-                      <FileText size={16} className="text-[#323231]" />
-                      <span className="text-sm font-bold font-['Montserrat'] text-[#323231]">View PDF</span>
+                    <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-[#f3f4f6] transition-colors group/pdf">
+                      <FileText size={14} className="text-[#323231]" />
+                      <span className="text-xs font-bold font-['Montserrat'] text-[#323231]">View PDF</span>
                     </button>
                   </div>
                 </div>
