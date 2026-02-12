@@ -10,11 +10,12 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/about' },
   { name: 'Solutions', href: '#', hasMegaMenu: true },
-  { name: 'Our Partners', href: '/#our-partners' },
-  { name: 'Doctors Corner', href: '/education' },
+  // These items don't have dedicated pages yet; keep them visible but non-clickable
+  { name: 'Our Partners', href: '#', disabled: true },
+  { name: 'Doctors Corner', href: '#', disabled: true },
   { name: 'Events', href: '/events' },
   { name: 'Education', href: '/education' },
-  { name: 'More', href: '/#contact', hasDropdown: true },
+  { name: 'More', href: '#', hasDropdown: true, disabled: true },
 ];
 
 export const Header = () => {
@@ -100,6 +101,17 @@ export const Header = () => {
                         <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
+                  ) : link.disabled ? (
+                    <span
+                      className="group flex items-center gap-1 text-white/50 text-[13px] xl:text-[14px] font-medium px-3 py-2 rounded-full cursor-default"
+                    >
+                      {link.name}
+                      {link.hasDropdown && (
+                        <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
+                          <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      )}
+                    </span>
                   ) : (
                     <Link
                       to={link.href.startsWith('#') ? '#' : link.href}
@@ -194,6 +206,14 @@ export const Header = () => {
                             )}
                           </AnimatePresence>
                         </>
+                      ) : link.disabled ? (
+                        <button
+                          type="button"
+                          className="text-white/50 text-base font-medium py-3 transition-colors border-b border-white/5 last:border-0 cursor-default"
+                          disabled
+                        >
+                          {link.name}
+                        </button>
                       ) : (
                         <Link
                           to={link.href.startsWith('#') ? '#' : link.href}

@@ -9,8 +9,9 @@ const footerLinks = [
     title: "Home",
     links: [
       { name: "About Us", href: "/about" },
-      { name: "Our Partners", href: "/#our-partners" },
-      { name: "Careers", href: "/about" }
+      // Our Partners & Careers don't have dedicated pages yet, keep as non-clickable
+      { name: "Our Partners", href: "#", disabled: true },
+      { name: "Careers", href: "#", disabled: true }
     ]
   },
   {
@@ -18,7 +19,7 @@ const footerLinks = [
     links: [
       { name: "Dental Solutions", href: "/solutions/dental" },
       { name: "Medical Solutions", href: "/solutions/medical" },
-      { name: "Doctors Corner", href: "/education" },
+      { name: "Doctors Corner", href: "#", disabled: true },
       { name: "Education & Learning", href: "/education" }
     ]
   },
@@ -76,9 +77,15 @@ export function Footer() {
                 <ul className="flex flex-col gap-4">
                   {col.links.map((link, lIdx) => (
                     <li key={lIdx}>
-                      <Link to={link.href} className="text-sm text-white/70 hover:text-white transition-colors font-['Arial'] whitespace-nowrap">
-                        {link.name}
-                      </Link>
+                      {link.disabled ? (
+                        <span className="text-sm text-white/40 font-['Arial'] whitespace-nowrap cursor-default">
+                          {link.name}
+                        </span>
+                      ) : (
+                        <Link to={link.href} className="text-sm text-white/70 hover:text-white transition-colors font-['Arial'] whitespace-nowrap">
+                          {link.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                   {/* Social Icons inside Legal Column as per design */}
